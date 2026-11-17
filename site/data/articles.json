@@ -5,7 +5,11 @@
     "title_uk": "Сант'Аньєзе-ін-Агоне",
     "title_en": "Sant'Agnese in Agone",
     "country": "IT",
-    "kind": "architecture"
+    "kind": "architecture",
+    "subjects": [
+      "Q1192577",
+      "x:leo-and-attila-algardi"
+    ]
   },
   {
     "id": "2026-10-16-alexander-vii",
@@ -13,7 +17,12 @@
     "title_uk": "Олександр VII",
     "title_en": "Pope Alexander VII",
     "country": "IT",
-    "kind": "patronage"
+    "kind": "patronage",
+    "subjects": [
+      "Q127254",
+      "Q1808677",
+      "Q826635"
+    ]
   },
   {
     "id": "2026-10-19-st-peters-square",
@@ -21,7 +30,11 @@
     "title_uk": "Площа Святого Петра",
     "title_en": "St Peter's Square",
     "country": "IT",
-    "kind": "architecture"
+    "kind": "architecture",
+    "subjects": [
+      "Q83425",
+      "Q1444766"
+    ]
   },
   {
     "id": "2026-10-21-st-peters-basilica",
@@ -29,7 +42,12 @@
     "title_uk": "Базиліка Святого Петра",
     "title_en": "St Peter's Basilica",
     "country": "IT",
-    "kind": "architecture"
+    "kind": "architecture",
+    "subjects": [
+      "Q12512",
+      "Q2439030",
+      "Q131579"
+    ]
   },
   {
     "id": "2026-10-23-santa-maria-maggiore",
@@ -37,7 +55,10 @@
     "title_uk": "Санта-Марія-Маджоре",
     "title_en": "Santa Maria Maggiore",
     "country": "IT",
-    "kind": "architecture"
+    "kind": "architecture",
+    "subjects": [
+      "Q186282"
+    ]
   },
   {
     "id": "2026-10-26-bernini-and-borromini",
@@ -45,7 +66,15 @@
     "title_uk": "Берніні й Борроміні",
     "title_en": "Bernini and Borromini",
     "country": "IT",
-    "kind": "architecture"
+    "kind": "architecture",
+    "subjects": [
+      "Q160538",
+      "Q123150",
+      "Q655470",
+      "Q867329",
+      "Q1354667",
+      "Q1324617"
+    ]
   },
   {
     "id": "2026-10-28-veiled-christ",
@@ -53,7 +82,11 @@
     "title_uk": "Христос під покровом",
     "title_en": "The Veiled Christ",
     "country": "IT",
-    "kind": "sculpture"
+    "kind": "sculpture",
+    "subjects": [
+      "Q3697674",
+      "Q897839"
+    ]
   },
   {
     "id": "2026-10-30-notre-dame-de-paris",
@@ -61,7 +94,10 @@
     "title_uk": "Нотр-Дам",
     "title_en": "Notre-Dame de Paris",
     "country": "FR",
-    "kind": "architecture"
+    "kind": "architecture",
+    "subjects": [
+      "Q2981"
+    ]
   },
   {
     "id": "2026-11-01-las-meninas",
@@ -69,7 +105,11 @@
     "title_uk": "Меніни Веласкеса",
     "title_en": "Velázquez's Las Meninas",
     "country": "ES",
-    "kind": "painting"
+    "kind": "painting",
+    "subjects": [
+      "Q208758",
+      "Q297"
+    ]
   },
   {
     "id": "2026-11-02-david",
@@ -77,7 +117,11 @@
     "title_uk": "Давид",
     "title_en": "Michelangelo's David",
     "country": "IT",
-    "kind": "sculpture"
+    "kind": "sculpture",
+    "subjects": [
+      "Q179900",
+      "Q5592"
+    ]
   },
   {
     "id": "2026-11-04-brooklyn-bridge",
@@ -85,7 +129,13 @@
     "title_uk": "Бруклінський міст",
     "title_en": "Brooklyn Bridge",
     "country": "US",
-    "kind": "engineering"
+    "kind": "engineering",
+    "subjects": [
+      "Q125006",
+      "Q77237",
+      "Q966054",
+      "Q49902"
+    ]
   },
   {
     "id": "2026-11-06-ghent-altarpiece",
@@ -93,7 +143,12 @@
     "title_uk": "Гентський вівтар",
     "title_en": "The Ghent Altarpiece",
     "country": "BE",
-    "kind": "painting"
+    "kind": "painting",
+    "subjects": [
+      "Q734834",
+      "Q102272",
+      "Q364350"
+    ]
   },
   {
     "id": "2026-11-08-raimondo-di-sangro",
@@ -101,7 +156,10 @@
     "title_uk": "Раймондо ді Сангро",
     "title_en": "Raimondo di Sangro",
     "country": "IT",
-    "kind": "patronage"
+    "kind": "patronage",
+    "subjects": [
+      "Q119049"
+    ]
   },
   {
     "id": "2026-11-09-haussmanns-paris",
@@ -109,7 +167,11 @@
     "title_uk": "Париж Османа",
     "title_en": "Haussmann's Paris",
     "country": "FR",
-    "kind": "urbanism"
+    "kind": "urbanism",
+    "subjects": [
+      "Q1117470",
+      "Q191798"
+    ]
   },
   {
     "id": "2026-11-11-kutna-hora",
@@ -117,7 +179,12 @@
     "title_uk": "Кутна Гора",
     "title_en": "Kutná Hora",
     "country": "CZ",
-    "kind": "architecture"
+    "kind": "architecture",
+    "subjects": [
+      "Q155975",
+      "Q913185",
+      "Q513821"
+    ]
   },
   {
     "id": "2026-11-13-monuments-men",
@@ -125,7 +192,11 @@
     "title_uk": "«Охоронці скарбів» і шахта Альтаусзее",
     "title_en": "The Monuments Men and the Altaussee salt mine",
     "country": "AT",
-    "kind": "history"
+    "kind": "history",
+    "subjects": [
+      "Q2273396",
+      "Q1635896"
+    ]
   },
   {
     "id": "2026-11-15-forth-bridge",
@@ -133,7 +204,12 @@
     "title_uk": "Форт-Брідж",
     "title_en": "Forth Bridge",
     "country": "GB",
-    "kind": "engineering"
+    "kind": "engineering",
+    "subjects": [
+      "Q275",
+      "Q1700096",
+      "Q817394"
+    ]
   },
   {
     "id": "2026-11-16-holbeins-ambassadors",
@@ -141,6 +217,10 @@
     "title_uk": "Посли Гольбейна",
     "title_en": "Holbein's The Ambassadors",
     "country": "GB",
-    "kind": "painting"
+    "kind": "painting",
+    "subjects": [
+      "Q1212937",
+      "Q48319"
+    ]
   }
 ]

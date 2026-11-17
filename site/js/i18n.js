@@ -4,6 +4,11 @@ export const STRINGS = {
   uk: {
     views: { graph: 'Граф', timeline: 'Хронологія', map: 'Мапа', quiz: 'Квіз' },
     soon: 'скоро',
+    issues: 'Випуски',
+    showIssues: 'Показати випуски',
+    hideIssues: 'Сховати випуски',
+    wholeAtlas: 'Весь атлас',
+    issueCount: n => `У випуску: ${n}`,
     search: 'Людина, твір, місце…',
     searchLabel: 'Пошук',
     noResults: 'Нічого не знайдено',
@@ -57,6 +62,11 @@ export const STRINGS = {
   en: {
     views: { graph: 'Graph', timeline: 'Timeline', map: 'Map', quiz: 'Quiz' },
     soon: 'soon',
+    issues: 'Issues',
+    showIssues: 'Show issues',
+    hideIssues: 'Hide issues',
+    wholeAtlas: 'Whole atlas',
+    issueCount: n => `In this issue: ${n}`,
     search: 'Person, work, place…',
     searchLabel: 'Search',
     noResults: 'Nothing found',

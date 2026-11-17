@@ -129,9 +129,12 @@ The validator errors on an unknown `rel` and warns when the from/to types don't 
   "title_uk": "Площа Святого Петра",
   "title_en": "St Peter's Square",
   "country": "IT",
-  "kind": "architecture"
+  "kind": "architecture",
+  "subjects": ["Q83425", "Q1444766"]
 }
 ```
+
+`subjects` lists the article's main subjects, most important first; the first one is opened when the issue is chosen. Each must be an existing node marked `core`.
 
 There is no article text and no links to private chat or session pages, only metadata. The digest articles often address the reader personally ("you liked…", "you saw…"), and publishing a cleaned copy would mean trusting the routine to remove all of it with no review. Article text is deferred (see *Later*).
 
@@ -188,7 +191,11 @@ An optional `package.json` with only `"scripts": { "validate": "node scripts/val
 3. **Map:** Leaflet with the base map from the repo (and an optional OSM layer), pins from `coords`.
 4. **Quiz:** questions generated from edges ("Who created X?", "Where is X?", "When?"). Spaced repetition state lives in `localStorage` only.
 
-**Graph defaults and filters.** The graph opens with only the `core` nodes. "Main nodes only" is one filter alongside type, country, art form and century, and all filters combine (AND). The graph always shows how much is hidden ("showing 23 of 152 · show all"). Opening a node (from search, a link or a relation) overrides the filters for that node: its first-level neighbours are always shown, so filters never block reading through the graph. The filter state is kept in the URL hash, so a copied link reproduces the view.
+**Starting point.** On desktop the page opens on the whole atlas (main nodes only, nothing selected); the issue shelf beside it makes narrowing down one click. On a phone (< 900 px) it opens on the latest issue with the panel closed, because a whole-atlas view is unreadable on a small screen. This applies only to the bare URL; a link with a route opens exactly that route. Choosing an issue shows only that article's nodes and opens its main subject (`subjects[0]` in `articles.json`). Beside the graph sits an **issue shelf**: the articles newest first, a column on desktop and a horizontal strip on a phone. Choosing an issue shows that issue's nodes and opens its main subject. A "Whole atlas" entry switches to the full graph.
+
+Routes: `#/` (or no hash) redirects to the latest issue; `#/a/<article-id>` is one issue; `#/atlas` is the full graph; `/n/<node-id>` can follow either (`#/a/<id>/n/<node>`, `#/atlas/n/<node>`), and filters go in the query string.
+
+**Graph defaults and filters (whole atlas).** The whole atlas opens with only the `core` nodes. "Main nodes only" is one filter alongside type, country, art form and century, and all filters combine (AND). The graph always shows how much is hidden ("showing 23 of 152 · show all"). Opening a node (from search, a link or a relation) overrides the filters for that node: its first-level neighbours are always shown, so filters never block reading through the graph. The filter state is kept in the URL hash, so a copied link reproduces the view.
 
 **Node styling.** Each type has both a colour and a shape (person = circle, work = rounded square, place = diamond, event = ring), so types stay distinguishable without relying on colour alone.
 
@@ -249,6 +256,9 @@ This repo is public. Rules for everything committed, including by the routine:
 
 ## Later
 
+- **Semantic zoom for the full atlas ("islands").** Zoomed out, the atlas shows clusters as labelled islands (e.g. "Rome · 34", "Paris · 12", "Ghent · 9") instead of individual nodes. Zooming in splits an island into its core nodes, then into all nodes. Clusters could come from places (`located_in` chains), from countries, or from community detection on the graph. This is what keeps "show everything" readable at 500+ nodes. Build it once the graph is big enough to need it.
+- **Collapsed relation groups in the focus ring.** The ring is already grouped by relation, with small gaps between groups (labelling the groups on the graph was tried and was too noisy). For very busy nodes, a sector with more than about 6 nodes could collapse into one bubble with a counter, expanding on click. Later still: mark masterpieces (e.g. a `highlight` flag on edges or nodes) so the most important works stand out within a sector.
+- **Guided journeys.** Short curated walks through the graph, e.g. "From Bernini to Borromini" or "Who saved the Ghent Altarpiece": 4–6 steps, each opening a node with the panel. The routine could suggest one journey per issue. Stored as data (`journeys.json`: id, title, ordered node ids, one-line captions).
 - **Full article text in the panel.** Each article would be stored as Markdown in `site/articles/<id>.md`, with explicit `[text](node:<id>)` links and inline images listed in `images.json`, and rendered by a small renderer for a limited set of Markdown features. The panel would show the article(s) in which the node is `core` below the summary. This is blocked on privacy: the digest text addresses the reader, so it needs either a public version written for the purpose or a review step before anything is published, not a cleanup by the routine with nobody checking.
 
 ## Decisions

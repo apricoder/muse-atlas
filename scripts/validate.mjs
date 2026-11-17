@@ -44,7 +44,7 @@ const KEY_ORDER = {
   years: ['start', 'end', 'approx'],
   wiki: ['uk', 'en'],
   edge: ['from', 'rel', 'to', 'years', 'article'],
-  article: ['id', 'date', 'title_uk', 'title_en', 'country', 'kind'],
+  article: ['id', 'date', 'title_uk', 'title_en', 'country', 'kind', 'subjects'],
   image: ['file', 'node', 'source', 'author', 'license', 'caption_uk', 'caption_en'],
 };
 const REQUIRED = {
@@ -203,6 +203,24 @@ nodes.forEach((n, i) => {
   if (n.wiki !== undefined && checkKeys(`${where}.wiki`, n.wiki, 'wiki')) {
     for (const [lang, title] of Object.entries(n.wiki)) {
       if (typeof title !== 'string' || !title || /[\s#?]|^https?:/.test(title)) err(where, `wiki.${lang} must be a page title with underscores, not a URL`);
+    }
+  }
+});
+
+// article subjects: existing core nodes that list the article
+articles.forEach((a, i) => {
+  if (!a || a.subjects === undefined) {
+    if (a?.id) warn(`articles.json[${i}] (${a.id})`, 'no subjects; the issue shelf cannot open it');
+    return;
+  }
+  const where = `articles.json[${i}] (${a.id})`;
+  if (!Array.isArray(a.subjects) || !a.subjects.length) { err(where, 'subjects must be a non-empty array'); return; }
+  for (const s of a.subjects) {
+    const n = nodeById.get(s);
+    if (!n) err(where, `unknown subject "${s}"`);
+    else {
+      if (n.core !== true) err(where, `subject "${s}" is not marked core`);
+      if (!(n.articles || []).includes(a.id)) err(where, `subject "${s}" does not list this article`);
     }
   }
 });

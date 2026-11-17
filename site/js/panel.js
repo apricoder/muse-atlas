@@ -49,7 +49,7 @@ function renderSummary(text, ctx) {
     let last = 0;
     for (const m of p.matchAll(/\[([^\[\]]+)\]\(node:([^)\s]+)\)/g)) {
       if (m.index > last) el.append(p.slice(last, m.index));
-      el.append(ctx.nodes.has(m[2]) ? h('a', { href: ctx.hrefFor(m[2]) }, m[1]) : m[1]);
+      el.append(ctx.nodes.has(m[2]) ? hoverable(h('a', { href: ctx.hrefFor(m[2]) }, m[1]), m[2], ctx) : m[1]);
       last = m.index + m[0].length;
     }
     if (last < p.length) el.append(p.slice(last));
@@ -72,7 +72,18 @@ function relationGroups(node, ctx) {
   return [...groups.entries()].sort((a, b) => order(a[0]) - order(b[0]));
 }
 
-function groupTitle(key, lang) {
+/** Hovering or focusing a link to a node highlights that node on the graph. */
+function hoverable(el, id, ctx) {
+  const on = () => ctx.onHover?.(id);
+  const off = () => ctx.onHover?.(null);
+  el.addEventListener('mouseenter', on);
+  el.addEventListener('mouseleave', off);
+  el.addEventListener('focus', on);
+  el.addEventListener('blur', off);
+  return el;
+}
+
+export function groupTitle(key, lang) {
   const [dir, rel] = key.split(':');
   const s = STRINGS[lang];
   return (dir === 'in' ? s.relIn[rel] : s.relOut[rel]) || rel;
@@ -80,10 +91,10 @@ function groupTitle(key, lang) {
 
 function relLink(item, ctx) {
   const y = item.edge.years ? yearsLabel(item.edge.years, ctx.lang) : '';
-  return h('a', { class: 'rl', href: ctx.hrefFor(item.other.id) },
+  return hoverable(h('a', { class: 'rl', href: ctx.hrefFor(item.other.id) },
     h('span', { class: `dot ${item.other.type}`, 'aria-hidden': 'true' }),
     label(item.other, ctx.lang),
-    y ? h('span', { class: 'y' }, y) : null);
+    y ? h('span', { class: 'y' }, y) : null), item.other.id, ctx);
 }
 
 export function renderPanel(root, node, ctx) {

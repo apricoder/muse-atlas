@@ -1,5 +1,5 @@
 // App wiring: data, URL state (#/n/<id>?filters), filters, search, theme and language.
-import { STRINGS, label, fold, century, centuryLabel, countryName, yearsLabel } from './i18n.js';
+import { STRINGS, label, title, fold, century, centuryLabel, countryName, yearsLabel, dateLabel } from './i18n.js';
 import { createGraph } from './graph.js';
 import { renderPanel } from './panel.js';
 
@@ -23,14 +23,19 @@ const S = () => STRINGS[app.lang];
 // ---------------- URL state ----------------
 const DEFAULTS = { core: true, types: new Set(TYPES), country: '', kind: '', from: '', to: '' };
 
+// Routes: #/ -> latest issue; #/a/<article>[/n/<node>]; #/atlas[/n/<node>]; legacy #/n/<node> = atlas.
 function parseHash() {
   const raw = location.hash.replace(/^#/, '');
   const [path, query = ''] = raw.split('?');
-  const m = path.match(/^\/n\/(.+)$/);
   const q = new URLSearchParams(query);
   const types = q.get('types');
+  let mode = null, article = null, node = null;
+  let m;
+  if ((m = path.match(/^\/a\/([^/]+)(?:\/n\/(.+))?$/))) { mode = 'issue'; article = decodeURIComponent(m[1]); node = m[2] ? decodeURIComponent(m[2]) : null; }
+  else if ((m = path.match(/^\/atlas(?:\/n\/(.+))?$/))) { mode = 'atlas'; node = m[1] ? decodeURIComponent(m[1]) : null; }
+  else if ((m = path.match(/^\/n\/(.+)$/))) { mode = 'atlas'; node = decodeURIComponent(m[1]); }
   return {
-    node: m ? decodeURIComponent(m[1]) : null,
+    mode, article, node,
     core: q.has('core') ? q.get('core') !== '0' : DEFAULTS.core,
     types: types ? new Set(types.split(',').filter(t => TYPES.includes(t))) : new Set(DEFAULTS.types),
     country: q.get('country') || '',
@@ -40,14 +45,22 @@ function parseHash() {
   };
 }
 
-function hashFor(st) {
+function hashFor(partial) {
+  // Accepts partial state (e.g. a shelf link with no filters): missing filters mean defaults.
+  const st = { ...DEFAULTS, ...partial };
   const q = new URLSearchParams();
-  if (st.core !== DEFAULTS.core) q.set('core', st.core ? '1' : '0');
-  if (st.types.size !== TYPES.length) q.set('types', TYPES.filter(t => st.types.has(t)).join(','));
-  for (const k of ['country', 'kind', 'from', 'to']) if (st[k]) q.set(k, st[k]);
+  if (st.mode === 'atlas') {
+    if (st.core !== DEFAULTS.core) q.set('core', st.core ? '1' : '0');
+    if (st.types.size !== TYPES.length) q.set('types', TYPES.filter(t => st.types.has(t)).join(','));
+    for (const k of ['country', 'kind', 'from', 'to']) if (st[k]) q.set(k, st[k]);
+  }
   const qs = q.toString();
-  return `#${st.node ? `/n/${encodeURIComponent(st.node)}` : '/'}${qs ? `?${qs}` : ''}`;
+  const base = st.mode === 'issue' ? `/a/${encodeURIComponent(st.article)}` : '/atlas';
+  return `#${base}${st.node ? `/n/${encodeURIComponent(st.node)}` : ''}${qs ? `?${qs}` : ''}`;
 }
+
+const latestArticle = () => [...app.data.articles].sort((a, b) => b.date.localeCompare(a.date))[0];
+const issueStart = a => ({ mode: 'issue', article: a.id, node: a.subjects?.[0] && app.nodes.has(a.subjects[0]) ? a.subjects[0] : null });
 
 /** Push a new history entry (opening/closing nodes) or replace it (filter tweaks). */
 function go(patch, { replace = false } = {}) {
@@ -63,6 +76,7 @@ const hrefFor = id => hashFor({ ...app.state, node: id });
 
 // ---------------- filters ----------------
 function passes(n, st) {
+  if (st.mode === 'issue') return (n.articles || []).includes(st.article);
   if (st.core && !n.core) return false;
   if (!st.types.has(n.type)) return false;
   if (st.country && n.country !== st.country) return false;
@@ -81,6 +95,8 @@ function renderFilters() {
   const box = $('#filters');
   const focused = document.activeElement?.dataset?.f;
   box.replaceChildren();
+  box.hidden = st.mode !== 'atlas';
+  if (box.hidden) return;
   const el = (tag, props = {}, ...kids) => {
     const e = document.createElement(tag);
     for (const [k, v] of Object.entries(props)) { if (k.includes('-')) e.setAttribute(k, v); else e[k] = v; }
@@ -147,6 +163,14 @@ function renderStatus(shown) {
   const s = S();
   const total = app.data.nodes.length;
   const box = $('#status');
+  if (app.state.mode === 'issue') {
+    const b = document.createElement('button');
+    b.type = 'button';
+    b.textContent = s.wholeAtlas;
+    b.addEventListener('click', () => go({ mode: 'atlas', article: null, node: null }));
+    box.replaceChildren(s.issueCount(shown), ' · ', b);
+    return;
+  }
   box.replaceChildren(s.shown(shown, total));
   if (shown < total) {
     const b = document.createElement('button');
@@ -157,13 +181,91 @@ function renderStatus(shown) {
   }
 }
 
+// ---------------- issue shelf ----------------
+function renderShelf() {
+  const s = S();
+  const box = $('#shelf');
+  const st = app.state;
+  const list = document.createElement('ol');
+  list.className = 'shelf-list';
+  const collapsed = store.get('shelf') === 'collapsed';
+  document.body.classList.toggle('shelf-collapsed', collapsed);
+
+  const toggle = document.createElement('button');
+  toggle.type = 'button';
+  toggle.className = 'shelf-toggle';
+  toggle.setAttribute('aria-expanded', String(!collapsed));
+  toggle.setAttribute('aria-label', collapsed ? s.showIssues : s.hideIssues);
+  toggle.title = toggle.getAttribute('aria-label');
+  toggle.textContent = collapsed ? '»' : '«';
+  toggle.addEventListener('click', () => {
+    store.set('shelf', collapsed ? null : 'collapsed');
+    renderShelf();
+    app.graph?.resize();
+    $('#shelf .shelf-toggle')?.focus();
+  });
+
+  const atlas = document.createElement('a');
+  atlas.className = 'shelf-atlas';
+  atlas.href = hashFor({ ...st, mode: 'atlas', article: null, node: null });
+  atlas.textContent = s.wholeAtlas;
+  if (st.mode === 'atlas') atlas.setAttribute('aria-current', 'page');
+
+  const arts = [...app.data.articles].sort((a, b) => b.date.localeCompare(a.date));
+  for (const a of arts) {
+    const li = document.createElement('li');
+    const link = document.createElement('a');
+    link.className = 'issue';
+    link.href = hashFor(issueStart(a));
+    if (st.mode === 'issue' && st.article === a.id) link.setAttribute('aria-current', 'true');
+    const d = document.createElement('span');
+    d.className = 'd';
+    d.textContent = dateLabel(a.date, app.lang);
+    const t = document.createElement('span');
+    t.className = 't';
+    t.textContent = title(a, app.lang);
+    const k = document.createElement('span');
+    k.className = 'k';
+    k.textContent = [a.kind && s.kinds[a.kind], a.country && countryName(a.country, app.lang)].filter(Boolean).join(' · ');
+    link.append(d, t, k);
+    li.append(link);
+    list.append(li);
+  }
+  const head = document.createElement('div');
+  head.className = 'shelf-head';
+  const h = document.createElement('h2');
+  h.textContent = s.issues;
+  head.append(toggle, h, atlas);
+  const scrollTop = box.querySelector('.shelf-list')?.scrollTop || 0;
+  const scrollLeft = box.querySelector('.shelf-list')?.scrollLeft || 0;
+  box.replaceChildren(head, list);
+  list.scrollTop = scrollTop;
+  list.scrollLeft = scrollLeft;
+  box.setAttribute('aria-label', s.issues);
+}
+
 // ---------------- routing ----------------
 let lastNode;
-function route() {
+let lastHash = null;
+/** Render the current URL. Link clicks fire both popstate and hashchange: handle each URL once. */
+function route({ force = false } = {}) {
   if (!app.data) return;
-  const st = parseHash();
+  if (!force && location.hash === lastHash) return;
+  lastHash = location.hash;
+  let st = parseHash();
+  if (st.mode === 'issue' && !app.data.articlesById.has(st.article)) st.mode = null;
+  if (!st.mode) {
+    // Start screen. Desktop: the whole atlas (main nodes); the issue shelf is one click away.
+    // Phone: the latest issue, panel closed (a small graph is readable on a small screen).
+    const a = latestArticle();
+    const phone = matchMedia('(max-width: 899px)').matches;
+    st = { ...st, ...(phone && a ? { ...issueStart(a), node: null } : { mode: 'atlas', article: null, node: null }) };
+    history.replaceState({ start: true }, '', hashFor(st));
+    lastHash = location.hash;
+  }
   if (st.node && !app.nodes.has(st.node)) st.node = null;
   app.state = st;
+  renderShelf();
 
   const visible = new Set(app.data.nodes.filter(n => passes(n, st)).map(n => n.id));
   const forced = new Set();
@@ -183,6 +285,7 @@ function route() {
       articles: app.data.articlesById, images: app.data.imagesByFile, hrefFor,
       onBack: () => (history.state?.app ? history.back() : go({ node: null })),
       onClose: () => go({ node: null }),
+      onHover: id => app.graph.highlight(id),
     });
     panel.hidden = false;
   } else {
@@ -316,7 +419,7 @@ function setupChrome() {
       store.set('lang', app.lang === 'en' ? 'en' : null);
       applyChrome();
       app.graph?.setLang(app.lang);
-      route();
+      route({ force: true });
     });
   }
   for (const b of document.querySelectorAll('[data-zoom]')) {
@@ -326,8 +429,8 @@ function setupChrome() {
       else app.graph.zoomBy(z === 'in' ? 1.3 : 1 / 1.3);
     });
   }
-  window.addEventListener('popstate', route);
-  window.addEventListener('hashchange', route);
+  window.addEventListener('popstate', () => route());
+  window.addEventListener('hashchange', () => route());
   window.addEventListener('resize', () => app.graph?.resize());
 }
 

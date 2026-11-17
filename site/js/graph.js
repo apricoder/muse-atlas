@@ -71,11 +71,21 @@ function buildStyle() {
       selector: 'edge',
       style: {
         width: 1.2, 'line-color': c.edge, opacity: 0.5, 'curve-style': 'straight',
+        // Small arrow at the target: "who created what", "what is located where".
+        'target-arrow-shape': 'triangle', 'target-arrow-color': c.edge, 'arrow-scale': 0.75,
         'overlay-opacity': 0, 'transition-property': 'opacity', 'transition-duration': 150,
       },
     },
+    { selector: 'edge[rel = "rival_of"], edge[rel = "relative_of"]', style: { 'target-arrow-shape': 'none' } },
     { selector: 'edge[rel = "rival_of"]', style: { 'line-style': 'dashed', 'line-color': type.person, opacity: 0.8 } },
     { selector: '.hidden', style: { display: 'none' } },
+    {
+      selector: 'node.hover',
+      style: {
+        'underlay-color': c.text, 'underlay-opacity': 0.28, 'underlay-padding': 10, 'underlay-shape': 'ellipse',
+        'text-opacity': 1, 'font-weight': 700, opacity: 1, 'z-index': 30, 'min-zoomed-font-size': 0,
+      },
+    },
     { selector: 'node.faded', style: { opacity: 0.1, 'text-opacity': 0 } },
     { selector: 'edge.faded', style: { opacity: 0.04 } },
     {
@@ -87,6 +97,7 @@ function buildStyle() {
         'z-index': 10,
       },
     },
+    { selector: 'node.peek', style: { opacity: 0.6, 'text-opacity': 0.85, 'min-zoomed-font-size': 0, 'z-index': 25 } },
     { selector: 'node.nb', style: { 'text-opacity': 1, 'min-zoomed-font-size': 0, 'text-max-width': tw(200) } },
     // Ring labels point away from the centre.
     { selector: 'node[lpos = "left"]', style: { 'text-halign': 'left', 'text-valign': 'center', 'text-margin-x': -7, 'text-margin-y': 0 } },
@@ -161,8 +172,15 @@ export async function createGraph(container, { nodes, edges }, { lang, labelOf, 
   cy.on('zoom', () => { cancelAnimationFrame(raf); raf = requestAnimationFrame(rescale); });
 
   // Hover shows relation labels: on one edge, or on all edges of a hovered node.
-  cy.on('mouseover', 'node', e => { container.style.cursor = 'pointer'; e.target.connectedEdges().not('.hidden').addClass('hl'); });
-  cy.on('mouseout', 'node', e => { container.style.cursor = ''; e.target.connectedEdges().removeClass('hl'); });
+  // Hovering a node also "peeks" its neighbours: faded ones come back at half strength with labels.
+  const peek = n => {
+    const edges = n.connectedEdges().not('.hidden');
+    edges.addClass('hl');
+    edges.connectedNodes().not(n).addClass('peek');
+  };
+  const unpeek = () => { cy.edges('.hl').removeClass('hl'); cy.nodes('.peek').removeClass('peek'); };
+  cy.on('mouseover', 'node', e => { container.style.cursor = 'pointer'; cy.batch(() => peek(e.target)); });
+  cy.on('mouseout', 'node', () => { container.style.cursor = ''; cy.batch(unpeek); });
   cy.on('mouseover', 'edge', e => e.target.addClass('hl'));
   cy.on('mouseout', 'edge', e => e.target.removeClass('hl'));
 
@@ -172,7 +190,8 @@ export async function createGraph(container, { nodes, edges }, { lang, labelOf, 
   // A node dragged outside focus mode keeps its new place.
   cy.on('dragfree', 'node', e => { if (!focusId) home.set(e.target.id(), { ...e.target.position() }); });
 
-  // Ring of neighbours around the selected node, grouped by relation (same order as the panel).
+  // Ring of neighbours around the selected node, split into sectors by relation (same order as the
+  // panel), with a small gap between groups. No group titles: on the graph they were noise.
   function ringLayout(center, targets) {
     const c = home.get(center.id());
     targets.set(center.id(), c);
@@ -186,34 +205,54 @@ export async function createGraph(container, { nodes, edges }, { lang, labelOf, 
       const rel = e.data('rel');
       const key = SYM.has(rel) ? `sym:${rel}` : `${out ? 'out' : 'in'}:${rel}`;
       const rank = RING_ORDER.indexOf(key);
-      items.push({ node: other, rank: rank === -1 ? 999 : rank, label: other.data('label') });
+      items.push({ node: other, key, rank: rank === -1 ? 999 : rank, label: other.data('label') });
     });
     items.sort((a, b) => a.rank - b.rank || a.label.localeCompare(b.label));
     const count = items.length;
-    if (!count) return;
+    if (!count) return { c, r: 0, sectors: [] };
+    const groups = [];
+    for (const it of items) {
+      if (!groups.length || groups[groups.length - 1].key !== it.key) groups.push({ key: it.key, items: [] });
+      groups[groups.length - 1].items.push(it);
+    }
     const twoRings = count > 14;
-    const r = Math.max(150, count * (twoRings ? 15 : 24));
-    items.forEach((it, i) => {
-      const angle = -Math.PI / 2 + (2 * Math.PI * i) / count;
-      const radius = twoRings && i % 2 ? r * 1.32 : r;
-      const x = c.x + radius * Math.cos(angle);
-      const y = c.y + radius * Math.sin(angle);
-      targets.set(it.node.id(), { x, y });
-      const cos = Math.cos(angle);
-      it.node.data('lpos', Math.abs(cos) < 0.35 ? (Math.sin(angle) < 0 ? 'top' : 'bottom') : (cos < 0 ? 'left' : 'right'));
-    });
+    const r = Math.max(160, count * (twoRings ? 16 : 26));
+    const gap = groups.length > 1 ? 1.3 : 0; // gap between sectors, in item slots
+    const step = (2 * Math.PI) / (count + gap * groups.length);
+    let slot = 0;
+    const sectors = [];
+    for (const g of groups) {
+      const start = slot;
+      g.items.forEach((it, j) => {
+        const angle = -Math.PI / 2 + (slot + 0.5) * step;
+        const radius = twoRings && j % 2 ? r * 1.3 : r;
+        targets.set(it.node.id(), { x: c.x + radius * Math.cos(angle), y: c.y + radius * Math.sin(angle) });
+        const cos = Math.cos(angle);
+        it.node.data('lpos', Math.abs(cos) < 0.35 ? (Math.sin(angle) < 0 ? 'top' : 'bottom') : (cos < 0 ? 'left' : 'right'));
+        slot += 1;
+      });
+      sectors.push({ key: g.key, count: g.items.length, angle: -Math.PI / 2 + ((start + slot) / 2) * step });
+      slot += gap;
+    }
+    return { c, r, sectors };
   }
+
   const boundsOf = pts => pts.reduce((b, p) => ({
     x1: Math.min(b.x1, p.x), y1: Math.min(b.y1, p.y), x2: Math.max(b.x2, p.x), y2: Math.max(b.y2, p.y),
   }), { x1: Infinity, y1: Infinity, x2: -Infinity, y2: -Infinity });
 
   // Fit a model-space box into the view, never zooming in past MAX_FIT_ZOOM (small rings stay small).
   const MAX_FIT_ZOOM = 1.1;
-  function fitBox(bb, padding, animate) {
+  // Padding is in screen px; side padding is larger because ring labels stick out sideways.
+  function fitBox(bb, padding, animate, sidePadding = padding) {
     const w = Math.max(bb.x2 - bb.x1, 1), h = Math.max(bb.y2 - bb.y1, 1);
+    // Never let padding eat the view: at least ~45% of each dimension stays for the graph itself.
+    sidePadding = Math.min(sidePadding, cy.width() * 0.275);
+    padding = Math.min(padding, cy.height() * 0.275);
     const zoom = Math.max(cy.minZoom(), Math.min(MAX_FIT_ZOOM,
-      (cy.width() - 2 * padding) / w, (cy.height() - 2 * padding) / h));
+      (cy.width() - 2 * sidePadding) / w, (cy.height() - 2 * padding) / h));
     const pan = { x: cy.width() / 2 - zoom * (bb.x1 + w / 2), y: cy.height() / 2 - zoom * (bb.y1 + h / 2) };
+    cy.stop(true); // drop any queued viewport animation so fits never stack
     if (animate) cy.animate({ zoom, pan }, { duration: 420, easing: 'ease-in-out-cubic' });
     else cy.viewport({ zoom, pan });
   }
@@ -232,7 +271,7 @@ export async function createGraph(container, { nodes, edges }, { lang, labelOf, 
       const n = id ? cy.getElementById(id) : null;
       const targets = new Map(); // node id -> position; everything else goes home
       cy.batch(() => {
-        cy.elements().removeClass('faded sel nb focus');
+        cy.elements().removeClass('faded sel nb focus hover');
         cy.nodes().removeData('lpos');
         if (!n || n.empty()) return;
         const hood = n.closedNeighborhood();
@@ -254,7 +293,14 @@ export async function createGraph(container, { nodes, edges }, { lang, labelOf, 
       const eles = n && !n.empty() ? n.closedNeighborhood().not('.hidden') : null;
       if (!eles) return;
       // Fit to where the ring will be, in parallel with the move.
-      fitBox(boundsOf(eles.nodes().map(x => targets.get(x.id()) || home.get(x.id()))), 90, animate);
+      // Side labels keep a near-constant on-screen size, so reserve their estimated width as padding.
+      let longest = 0;
+      eles.nodes().forEach(x => {
+        const p = x.data('lpos');
+        if (p === 'left' || p === 'right') longest = Math.max(longest, (x.data('label') || '').length);
+      });
+      fitBox(boundsOf(eles.nodes().map(x => targets.get(x.id()) || home.get(x.id()))), 70, animate,
+        Math.min(230, 28 + longest * 6.6));
     },
     fitVisible(animate = true) {
       // Use home positions: nodes may still be gliding back from a focus ring.
@@ -268,6 +314,18 @@ export async function createGraph(container, { nodes, edges }, { lang, labelOf, 
       cy.batch(() => {
         nodes.forEach(n => cy.getElementById(n.id).data('label', labelOf(n, l)));
         cy.edges().forEach(e => e.data('relLabel', relLabel(e.data('rel'), l)));
+      });
+    },
+    /** Hover from the panel: emphasise one node (and its edge to the focused node), or clear with null. */
+    highlight(id) {
+      cy.batch(() => {
+        cy.nodes('.hover').removeClass('hover');
+        unpeek();
+        if (!id) return;
+        const n = cy.getElementById(id);
+        if (n.empty()) return;
+        n.addClass('hover');
+        peek(n);
       });
     },
     refreshStyle() { cy.style(buildStyle()); },
