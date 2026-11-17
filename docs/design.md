@@ -1,0 +1,226 @@
+# Muse Atlas — design (draft)
+
+Status: planning. Nothing is built yet. This document is the starting point for implementation.
+
+## Purpose
+
+A personal knowledge graph of art and architecture: the people, works, places and events covered by a recurring series of short art articles (written in Ukrainian), with links between them and years attached. It should help you:
+
+- **organise** what has been read: who made what, where it is, when, and how it connects to the rest;
+- **refresh** it easily: browse, filter and quiz;
+- **grow automatically**: each new article adds its entities and relations through a scheduled Claude routine that commits to this repo.
+
+It is a graph rather than a mind map: one person links to many works, places and other people, so the data is a graph that can be shown in several views.
+
+## Constraints
+
+- **Static only.** Hosted on GitHub Pages: no backend, no server, no secrets.
+- **No build step, no package management.** Plain HTML + ES modules + pinned library files kept in the repo. No bundler, no `npm install`, no `node_modules`, no lockfile (see *Stack*).
+- **Self-contained.** No runtime dependency on Wikipedia/Wikidata/Commons or CDNs (see *Self-contained assets*).
+- **Public repo.** Only public, encyclopaedic facts go in. No personal notes or reflections, no "visited / not visited", no private links (see *Privacy*).
+- **Languages:** Ukrainian first, English second. Every entity has `label_uk` (required) and `label_en` (optional but expected). The UI is in Ukrainian, with an English toggle later.
+- **Small scale:** about 100 entities now, a few hundred within a year. Flat JSON files plus a client-side JS library are enough.
+
+## Repo layout
+
+```
+site/                  # everything that is served; deployed to Pages as-is
+  index.html
+  js/                  # app code (ES modules)
+  css/
+  vendor/              # pinned third-party files (cytoscape, leaflet, base map)
+  data/
+    nodes.json
+    edges.json
+    articles.json
+    images.json
+  assets/img/          # local image copies
+scripts/
+  validate.mjs         # dependency-free Node validator
+docs/
+  design.md
+.github/workflows/pages.yml
+```
+
+## Data model
+
+Source of truth: JSON under `site/data/`, loaded by the page directly with `fetch`, with no conversion step. Formatting convention so diffs stay readable and stable: 2-space indent, one array entry per object, keys in the order shown below, a trailing newline. The validator checks the formatting (it re-serialises each file and compares), so the routine and humans can't drift.
+
+### Identifiers
+
+- **Wikidata QIDs** (`Q…`) are the canonical IDs wherever they exist. They deduplicate spelling variants (Берніні / Bernini / Бернини), and they bring labels, coordinates, dates, images and place hierarchy at write time.
+- Fallback for entities without a QID: `x:<kebab-slug>`, for example `x:roebling-rooster-crossing`.
+- Article IDs: `YYYY-MM-DD-<slug>`.
+
+### Nodes (`site/data/nodes.json`)
+
+```json
+{
+  "id": "Q5592",
+  "type": "person",
+  "label_uk": "Джан Лоренцо Берніні",
+  "label_en": "Gian Lorenzo Bernini",
+  "years": { "start": 1598, "end": 1680, "approx": false },
+  "country": "IT",
+  "kind": "sculpture",
+  "coords": [41.9022, 12.4539],
+  "image": "assets/img/q5592.jpg",
+  "core": true,
+  "articles": ["2026-10-14-st-peters-square"]
+}
+```
+
+| field | notes |
+|---|---|
+| `id` | QID or `x:` slug (example QID above is illustrative; verify when adding) |
+| `type` | `person` \| `work` \| `place` \| `event` \| `movement` |
+| `years` | person: birth–death; work: created/built; event: when (see *Fuzzy dates*) |
+| `country` | ISO 3166-1 alpha-2 (present-day country), for filtering |
+| `kind` | optional: `architecture` \| `painting` \| `sculpture` \| `engineering` \| … |
+| `coords` | optional `[lat, lon]`, mostly for places and works; copied from Wikidata |
+| `image` | optional; path to the local copy (see *Self-contained assets*) |
+| `core` | main subject of some article, as opposed to merely mentioned |
+
+### Edges (`site/data/edges.json`)
+
+```json
+{
+  "from": "Q5592",
+  "rel": "created",
+  "to": "Q…",
+  "years": { "start": 1656, "end": 1667 },
+  "article": "2026-10-14-st-peters-square"
+}
+```
+
+Relation vocabulary (closed list, extend on purpose):
+
+| rel | from → to |
+|---|---|
+| `created` | person → work |
+| `commissioned` | person → work |
+| `located_in` | work/place → place |
+| `born_in` / `died_in` / `buried_in` | person → place |
+| `depicts` | work → person/event |
+| `patron_of` | person → person |
+| `rival_of` | person ↔ person (symmetric) |
+| `influenced` | person/work → person/work |
+| `part_of` | work/place → work/place |
+| `restored` / `stolen_from` / `involved_in` | for events and histories |
+
+### Articles (`site/data/articles.json`)
+
+```json
+{
+  "id": "2026-10-14-st-peters-square",
+  "date": "2026-10-14",
+  "title_uk": "Площа Святого Петра",
+  "title_en": "St Peter's Square",
+  "country": "IT",
+  "kind": "architecture"
+}
+```
+
+There is no article text and no links to private chat or session pages, only metadata.
+
+### Fuzzy dates
+
+`years.start` / `years.end` are integers. Negative values mean BCE. `approx: true` means "c.". Leave `end` out for a point in time. This handles "c. 1432", "1506–1515" and "over 17 years" without free text.
+
+## Self-contained assets
+
+**Rule: the site must keep working if Wikipedia, Wikidata, Commons or any CDN changes or disappears.** Everything the site shows is copied into the repo when it's added. External services are only used as **sources at write time**, never at runtime.
+
+- **Facts:** dates, coords and labels taken from Wikidata are written into the JSON, so nothing is fetched at runtime. The QID is kept only as a reference.
+- **Images:** downloaded into `site/assets/img/` when the entity is added.
+  - Fetch a pre-scaled version (Commons `Special:FilePath/<file>?width=1000`) and keep only that, not the original. Aim for about 1000px on the long side and at most about 250 KB each (JPEG/WebP). There is no build step, so no generated thumbnails; the browser scales with CSS and uses `loading="lazy"`.
+  - File name: `<node-id-slug>[-n].<ext>`, for example `q5592.jpg` or `q5592-2.jpg`. Lowercase ASCII only, so URLs never need encoding.
+  - **Attribution is required**, since most Commons images are CC BY / CC BY-SA. Keep a record for each image in `site/data/images.json`:
+    ```json
+    {
+      "file": "assets/img/q5592.jpg",
+      "node": "Q5592",
+      "source": "https://commons.wikimedia.org/wiki/File:<original name>",
+      "author": "<author as given on Commons>",
+      "license": "CC BY-SA 4.0",
+      "caption_uk": "…"
+    }
+    ```
+    The site shows the credit wherever the image appears and on a credits page. Validation fails if an image has no license or author, or if an image file isn't listed.
+  - Only freely licensed or public-domain images. Fair-use images from Wikipedia are not allowed.
+- **Libraries:** pinned copies in `site/vendor/` (see *Stack*). No CDN at runtime.
+- **Map base layer:** live tile servers (OSM) can't be copied. Use a low-detail base map kept in the repo (a Natural Earth countries GeoJSON, a few hundred KB) as the default layer, with OSM tiles only as an optional detailed layer when online.
+- **Size budget:** GitHub Pages sites have a 1 GB limit and the repo should stay well under that. At ~250 KB × 3 images × a few hundred entities, that's ~200–300 MB over years, which is fine. Validation warns on any file over 500 KB. Prefer compression over Git LFS (Pages doesn't serve LFS files).
+
+## Validation (`node scripts/validate.mjs`)
+
+A single script using only Node built-ins (`node:fs`, `node:path`, `node:assert`), with no dependencies to install. It runs in CI and in the routine before every commit, and must pass:
+
+- JSON parses, and the formatting matches the convention (re-serialise and compare);
+- schema checks (required fields, enum values for `type` and `rel`, years are integers, `start <= end`);
+- unique node IDs, and the ID format is `Q\d+` or `x:[a-z0-9-]+`;
+- every edge's `from`/`to` exists in nodes, and every `article` exists in articles;
+- no exact duplicate edges;
+- every `image` path exists, every file in `assets/img/` is listed in `images.json`, and every image record has `author`, `license` and `source`;
+- warnings (not errors) for a node with no edges, a missing `label_en`, a place with no coords, or a file over 500 KB.
+
+An optional `package.json` with only `"scripts": { "validate": "node scripts/validate.mjs" }` and no dependencies is allowed as a shortcut.
+
+## Views (static site)
+
+1. **Graph:** Cytoscape.js. Filters by type, country, art form and century. Focus mode: click a node to see only its neighbourhood. Core nodes show by default and mentioned ones on request. It must work with touch on a phone.
+2. **Timeline:** everything placed by year, colour-coded by country or art form. It surfaces "these happened at the same time" connections. Likely plain SVG/HTML, no library.
+3. **Map:** Leaflet with the base map from the repo (and an optional OSM layer), pins from `coords`.
+4. **Quiz:** questions generated from edges ("Who created X?", "Where is X?", "When?"). Spaced repetition state lives in `localStorage` only.
+
+Plus an **entity page / side panel**: labels, years, image with credit, relations, and the articles where it appears.
+
+Order: v1 is the data plus graph plus entity panel. v2 adds the timeline and map. v3 adds the quiz.
+
+## Stack
+
+- **No build.** `site/index.html` loads pinned library files with `<script src="vendor/…">` and the app as native ES modules (`<script type="module" src="js/main.js">`). It works with any static file server locally (`python3 -m http.server -d site`).
+- **Libraries, pinned and stored in the repo:** Cytoscape.js and Leaflet (+ its CSS and marker images). Download the minified files of a specific released version once, and record the name, version, source URL and SHA-256 in `site/vendor/VERSIONS.md`. Updating = download the new version, update that file, commit.
+- **Why not a CDN:** a CDN breaks the self-contained rule, adds third-party requests on every visit, and needs `integrity` hashes to be safe. Browsers no longer share caches between sites, so it brings no caching benefit either.
+- **Why no bundler / npm:** two libraries and no TypeScript or framework give a bundler nothing to do. Having no dependencies means no supply-chain updates to manage. If the app outgrows this (TypeScript, many views), Vite can be added later without changing the data.
+- **Deploy:** a GitHub Actions workflow on push to `main`: run `node scripts/validate.mjs`, then upload `site/` with `actions/upload-pages-artifact` and `actions/deploy-pages`. That is a check plus an upload, not a build.
+
+## Automated updates (routine → repo)
+
+The article series is produced by a scheduled Claude routine with this repo attached. After it writes an article, it adds these steps:
+
+1. Extract the article's entities and relations. **Cap about 15 entities per article**, and mark `core` vs mentioned.
+2. Resolve IDs: first look in `site/data/nodes.json` (the repo is the index), then use Wikidata search (`wbsearchentities`, language `uk` then `en`). Check that the candidate's type and country match the article. Flag low-confidence matches in the commit message.
+3. Fill in facts from Wikidata where possible (dates, coords, labels), not from memory. Download 1–3 freely licensed images per core entity into `site/assets/img/` and record their attribution in `site/data/images.json`.
+4. Add the entries to the JSON files, run `node scripts/validate.mjs`, then commit and push straight to `main`. The routine is the only automated writer, and git history is the undo.
+5. If any step fails, skip it and mention that in the routine's notification. It must never block the article itself.
+
+The routine's own prompt and configuration live outside this repo.
+
+### Backfill
+
+A one-off run seeds the graph from the articles already written:
+
+1. Sant'Agnese in Agone and Algardi's relief "Leo and Attila"
+2. Pope Alexander VII
+3. St Peter's Square
+4. St Peter's Basilica and the Barberini bees
+5. Santa Maria Maggiore
+6. Bernini vs Borromini
+7. The Veiled Christ (Naples)
+8. Notre-Dame de Paris
+9. Las Meninas (Velázquez)
+10. Michelangelo's David
+
+## Privacy
+
+This repo is public. Rules for everything committed, including by the routine:
+
+- **In:** public, encyclopaedic facts (names, dates, places, relations, Wikimedia images with credits) and article titles and dates.
+- **Out:** personal reflections, travel plans, "been there / want to see", anything about the reader, email addresses, links to private Claude sessions or docs, routine IDs and prompts, tokens of any kind.
+- A possible personal layer (visited / want to see / seen in person) would live **only in the browser** (`localStorage`). A private overlay can be designed later if it's wanted.
+
+## Open questions
+
+- Should `country` be stored, or derived through `located_in` chains? Stored is simpler.
+- Licence: code (MIT?) vs data (CC0, matching Wikidata). Images keep their own licences per `images.json`.
