@@ -66,7 +66,10 @@ Source of truth: JSON under `site/data/`, loaded by the page directly with `fetc
   "coords": [41.9022, 12.4539],
   "image": "assets/img/q5592.jpg",
   "core": true,
-  "articles": ["2026-10-14-st-peters-square"]
+  "articles": ["2026-10-14-st-peters-square"],
+  "summary_uk": "Італійський скульптор і архітектор доби бароко, автор колонади [площі Святого Петра](node:Q…) …",
+  "summary_en": "Italian Baroque sculptor and architect …",
+  "wiki": { "uk": "Джан_Лоренцо_Берніні", "en": "Gian_Lorenzo_Bernini" }
 }
 ```
 
@@ -80,6 +83,8 @@ Source of truth: JSON under `site/data/`, loaded by the page directly with `fetc
 | `coords` | optional `[lat, lon]`, mostly for places and works; copied from Wikidata |
 | `image` | optional; path to the local copy (see *Self-contained assets*) |
 | `core` | main subject of some article, as opposed to merely mentioned |
+| `summary_uk` / `summary_en` | optional; 1–2 short paragraphs (about 600–1000 characters), neutral encyclopaedic tone, written from Wikidata/Wikipedia facts, **never paraphrased from the digest articles** (see *Privacy*). Paragraphs are separated by `\n\n`. The only markup allowed is inline node links `[text](node:<id>)` |
+| `wiki` | optional; Wikipedia page titles by language (`uk`, `en`), copied from Wikidata sitelinks. The site builds the URLs. They are outbound links only and nothing is fetched at runtime. The Wikidata link comes from the QID, so it needs no field |
 
 ### Edges (`site/data/edges.json`)
 
@@ -121,7 +126,7 @@ Relation vocabulary (closed list, extend on purpose):
 }
 ```
 
-There is no article text and no links to private chat or session pages, only metadata.
+There is no article text and no links to private chat or session pages, only metadata. The digest articles often address the reader personally ("you liked…", "you saw…"), and publishing a cleaned copy would mean trusting the routine to remove all of it with no review. Article text is deferred (see *Later*).
 
 ### Fuzzy dates
 
@@ -162,6 +167,9 @@ A single script using only Node built-ins (`node:fs`, `node:path`, `node:assert`
 - every edge's `from`/`to` exists in nodes, and every `article` exists in articles;
 - no exact duplicate edges;
 - every `image` path exists, every file in `assets/img/` is listed in `images.json`, and every image record has `author`, `license` and `source`;
+- every `node:` link in a summary points to an existing node, and summaries contain no markup other than those links;
+- **private content:** no file under `site/` may contain links to private Claude artifacts, chats, code sessions or projects, routine trigger IDs, Anthropic or GitHub tokens, or email addresses. The exact patterns are in the validator. This is the same check as the local pre-commit hook, which the cloud routine doesn't have because it clones the repo fresh. Since the routine must run the validator before every commit, the check applies wherever data is written;
+- **privacy backstop:** summaries and captions must not address the reader. The check fails on Ukrainian second-person words (`ти`, `ви`, `тебе`, `вас`, `твій`, `ваш` and their forms, matched as whole words) and English `you`/`your`. Encyclopaedic text never needs them, so a match means personal text leaked in;
 - warnings (not errors) for a node with no edges, a missing `label_en`, a place with no coords, or a file over 500 KB.
 
 An optional `package.json` with only `"scripts": { "validate": "node scripts/validate.mjs" }` and no dependencies is allowed as a shortcut.
@@ -173,7 +181,23 @@ An optional `package.json` with only `"scripts": { "validate": "node scripts/val
 3. **Map:** Leaflet with the base map from the repo (and an optional OSM layer), pins from `coords`.
 4. **Quiz:** questions generated from edges ("Who created X?", "Where is X?", "When?"). Spaced repetition state lives in `localStorage` only.
 
-Plus an **entity page / side panel**: labels, years, image with credit, relations, and the articles where it appears.
+Plus an **entity side panel**, which opens when a node is clicked in any view. From top to bottom:
+
+1. A full-width hero image with the title over a dark gradient, the years and type as small labels, and a one-line image credit underneath. Without an image, the panel shows a plain header.
+2. The summary, rendered as paragraphs with `node:` links. Clicking a link opens that node's panel and focuses it in the current view.
+3. Relations, grouped by `rel` and shown as links.
+4. "Згадується в": the titles and dates of the articles that mention the node.
+5. References: Wikipedia (uk, en) and Wikidata, each shown only when present.
+
+**Layout by screen width.** At about 900px and wider, the panel is a column on the right and the graph shrinks next to it. On narrower screens it is a bottom sheet with three positions:
+
+- **peek** (about 25%, the position it opens in): thumbnail, title, years and type. The graph stays usable, with the selected node centred in the visible area above the sheet;
+- **half** (about 55%): the hero image and the start of the summary;
+- **full**: the whole panel, scrolling. A grab handle and a close button stay pinned at the top.
+
+Swipe up or down to change position. Swiping down from peek, tapping empty graph space, or pressing back closes it. At full, dragging down shrinks the sheet only when the content is scrolled to the top; otherwise it scrolls the content. Following a link inside the panel keeps the sheet in its current position and moves the graph to the new node behind it. The sheet is built with plain CSS transforms and pointer events, uses `100dvh` and safe-area insets, and needs no library.
+
+The panel's state is in the URL hash (`#/n/Q5592`), so a panel can be linked and bookmarked, and the back button steps back through the nodes you visited. Summary rendering is a few lines of our own code: split paragraphs, escape all text, and turn `[text](node:id)` into links. No Markdown library is needed.
 
 Order: v1 is the data plus graph plus entity panel. v2 adds the timeline and map. v3 adds the quiz.
 
@@ -191,7 +215,7 @@ The article series is produced by a scheduled Claude routine with this repo atta
 
 1. Extract the article's entities and relations. **Cap about 15 entities per article**, and mark `core` vs mentioned.
 2. Resolve IDs: first look in `site/data/nodes.json` (the repo is the index), then use Wikidata search (`wbsearchentities`, language `uk` then `en`). Check that the candidate's type and country match the article. Flag low-confidence matches in the commit message.
-3. Fill in facts from Wikidata where possible (dates, coords, labels), not from memory. Download 1–3 freely licensed images per core entity into `site/assets/img/` and record their attribution in `site/data/images.json`.
+3. Fill in facts from Wikidata where possible (dates, coords, labels, Wikipedia sitelinks for `wiki`), not from memory. Write `summary_uk` (and `summary_en`) from Wikidata/Wikipedia, not from the article text, and add `node:` links to other nodes that are already in the graph. Download 1–3 freely licensed images per core entity into `site/assets/img/` and record their attribution in `site/data/images.json`.
 4. Add the entries to the JSON files, run `node scripts/validate.mjs`, then commit and push straight to `main`. The routine is the only automated writer, and git history is the undo.
 5. If any step fails, skip it and mention that in the routine's notification. It must never block the article itself.
 
@@ -216,9 +240,14 @@ A one-off run seeds the graph from the articles already written:
 
 This repo is public. Rules for everything committed, including by the routine:
 
-- **In:** public, encyclopaedic facts (names, dates, places, relations, Wikimedia images with credits) and article titles and dates.
+- **In:** public, encyclopaedic facts (names, dates, places, relations, Wikimedia images with credits), neutral node summaries written from public sources, and article titles and dates.
+- **Not yet:** article text (see *Later*).
 - **Out:** personal reflections, travel plans, "been there / want to see", anything about the reader, email addresses, links to private Claude sessions or docs, routine IDs and prompts, tokens of any kind.
 - A possible personal layer (visited / want to see / seen in person) would live **only in the browser** (`localStorage`). A private overlay can be designed later if it's wanted.
+
+## Later
+
+- **Full article text in the panel.** Each article would be stored as Markdown in `site/articles/<id>.md`, with explicit `[text](node:<id>)` links and inline images listed in `images.json`, and rendered by a small renderer for a limited set of Markdown features. The panel would show the article(s) in which the node is `core` below the summary. This is blocked on privacy: the digest text addresses the reader, so it needs either a public version written for the purpose or a review step before anything is published, not a cleanup by the routine with nobody checking.
 
 ## Open questions
 

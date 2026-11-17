@@ -1,0 +1,19 @@
+# Claude Code: local settings, sessions and notes never go into this public repo
+.claude/
+CLAUDE.local.md
+
+# Secrets
+.env
+.env.*
+*.pem
+*.key
+
+# OS and editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+
+# Tooling we don't use, in case something creates it
+node_modules/
