@@ -1,0 +1,146 @@
+[
+  {
+    "id": "2026-10-01-sant-agnese-in-agone",
+    "date": "2026-10-01",
+    "title_uk": "Сант'Аньєзе-ін-Агоне",
+    "title_en": "Sant'Agnese in Agone",
+    "country": "IT",
+    "kind": "architecture"
+  },
+  {
+    "id": "2026-10-16-alexander-vii",
+    "date": "2026-10-16",
+    "title_uk": "Олександр VII",
+    "title_en": "Pope Alexander VII",
+    "country": "IT",
+    "kind": "patronage"
+  },
+  {
+    "id": "2026-10-19-st-peters-square",
+    "date": "2026-10-19",
+    "title_uk": "Площа Святого Петра",
+    "title_en": "St Peter's Square",
+    "country": "IT",
+    "kind": "architecture"
+  },
+  {
+    "id": "2026-10-21-st-peters-basilica",
+    "date": "2026-10-21",
+    "title_uk": "Базиліка Святого Петра",
+    "title_en": "St Peter's Basilica",
+    "country": "IT",
+    "kind": "architecture"
+  },
+  {
+    "id": "2026-10-23-santa-maria-maggiore",
+    "date": "2026-10-23",
+    "title_uk": "Санта-Марія-Маджоре",
+    "title_en": "Santa Maria Maggiore",
+    "country": "IT",
+    "kind": "architecture"
+  },
+  {
+    "id": "2026-10-26-bernini-and-borromini",
+    "date": "2026-10-26",
+    "title_uk": "Берніні й Борроміні",
+    "title_en": "Bernini and Borromini",
+    "country": "IT",
+    "kind": "architecture"
+  },
+  {
+    "id": "2026-10-28-veiled-christ",
+    "date": "2026-10-28",
+    "title_uk": "Христос під покровом",
+    "title_en": "The Veiled Christ",
+    "country": "IT",
+    "kind": "sculpture"
+  },
+  {
+    "id": "2026-10-30-notre-dame-de-paris",
+    "date": "2026-10-30",
+    "title_uk": "Нотр-Дам",
+    "title_en": "Notre-Dame de Paris",
+    "country": "FR",
+    "kind": "architecture"
+  },
+  {
+    "id": "2026-11-01-las-meninas",
+    "date": "2026-11-01",
+    "title_uk": "Меніни Веласкеса",
+    "title_en": "Velázquez's Las Meninas",
+    "country": "ES",
+    "kind": "painting"
+  },
+  {
+    "id": "2026-11-02-david",
+    "date": "2026-11-02",
+    "title_uk": "Давид",
+    "title_en": "Michelangelo's David",
+    "country": "IT",
+    "kind": "sculpture"
+  },
+  {
+    "id": "2026-11-04-brooklyn-bridge",
+    "date": "2026-11-04",
+    "title_uk": "Бруклінський міст",
+    "title_en": "Brooklyn Bridge",
+    "country": "US",
+    "kind": "engineering"
+  },
+  {
+    "id": "2026-11-06-ghent-altarpiece",
+    "date": "2026-11-06",
+    "title_uk": "Гентський вівтар",
+    "title_en": "The Ghent Altarpiece",
+    "country": "BE",
+    "kind": "painting"
+  },
+  {
+    "id": "2026-11-08-raimondo-di-sangro",
+    "date": "2026-11-08",
+    "title_uk": "Раймондо ді Сангро",
+    "title_en": "Raimondo di Sangro",
+    "country": "IT",
+    "kind": "patronage"
+  },
+  {
+    "id": "2026-11-09-haussmanns-paris",
+    "date": "2026-11-09",
+    "title_uk": "Париж Османа",
+    "title_en": "Haussmann's Paris",
+    "country": "FR",
+    "kind": "urbanism"
+  },
+  {
+    "id": "2026-11-11-kutna-hora",
+    "date": "2026-11-11",
+    "title_uk": "Кутна Гора",
+    "title_en": "Kutná Hora",
+    "country": "CZ",
+    "kind": "architecture"
+  },
+  {
+    "id": "2026-11-13-monuments-men",
+    "date": "2026-11-13",
+    "title_uk": "«Охоронці скарбів» і шахта Альтаусзее",
+    "title_en": "The Monuments Men and the Altaussee salt mine",
+    "country": "AT",
+    "kind": "history"
+  },
+  {
+    "id": "2026-11-15-forth-bridge",
+    "date": "2026-11-15",
+    "title_uk": "Форт-Брідж",
+    "title_en": "Forth Bridge",
+    "country": "GB",
+    "kind": "engineering"
+  },
+  {
+    "id": "2026-11-16-holbeins-ambassadors",
+    "date": "2026-11-16",
+    "title_uk": "Посли Гольбейна",
+    "title_en": "Holbein's The Ambassadors",
+    "country": "GB",
+    "kind": "painting"
+  }
+]

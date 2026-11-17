@@ -1,0 +1,1716 @@
+[
+  {
+    "from": "Q101266",
+    "rel": "commissioned",
+    "to": "Q1192577",
+    "years": {
+      "start": 1652
+    },
+    "article": "2026-10-01-sant-agnese-in-agone"
+  },
+  {
+    "from": "Q372066",
+    "rel": "created",
+    "to": "Q1192577",
+    "years": {
+      "start": 1652,
+      "end": 1653
+    },
+    "article": "2026-10-01-sant-agnese-in-agone"
+  },
+  {
+    "from": "Q123150",
+    "rel": "created",
+    "to": "Q1192577",
+    "years": {
+      "start": 1653,
+      "end": 1657
+    },
+    "article": "2026-10-01-sant-agnese-in-agone"
+  },
+  {
+    "from": "Q1192577",
+    "rel": "located_in",
+    "to": "Q463400",
+    "article": "2026-10-01-sant-agnese-in-agone"
+  },
+  {
+    "from": "Q463400",
+    "rel": "located_in",
+    "to": "Q220",
+    "article": "2026-10-01-sant-agnese-in-agone"
+  },
+  {
+    "from": "Q963671",
+    "rel": "located_in",
+    "to": "Q463400",
+    "article": "2026-10-01-sant-agnese-in-agone"
+  },
+  {
+    "from": "Q101266",
+    "rel": "commissioned",
+    "to": "x:leo-and-attila-algardi",
+    "years": {
+      "start": 1646
+    },
+    "article": "2026-10-01-sant-agnese-in-agone"
+  },
+  {
+    "from": "Q336798",
+    "rel": "created",
+    "to": "x:leo-and-attila-algardi",
+    "years": {
+      "start": 1646,
+      "end": 1653
+    },
+    "article": "2026-10-01-sant-agnese-in-agone"
+  },
+  {
+    "from": "x:leo-and-attila-algardi",
+    "rel": "part_of",
+    "to": "Q12512",
+    "article": "2026-10-01-sant-agnese-in-agone"
+  },
+  {
+    "from": "Q336798",
+    "rel": "influenced",
+    "to": "Q1348674",
+    "article": "2026-10-01-sant-agnese-in-agone"
+  },
+  {
+    "from": "Q655470",
+    "rel": "located_in",
+    "to": "Q463400",
+    "article": "2026-10-01-sant-agnese-in-agone"
+  },
+  {
+    "from": "Q127254",
+    "rel": "born_in",
+    "to": "Q2751",
+    "years": {
+      "start": 1599
+    },
+    "article": "2026-10-16-alexander-vii"
+  },
+  {
+    "from": "Q127254",
+    "rel": "patron_of",
+    "to": "Q160538",
+    "years": {
+      "start": 1655,
+      "end": 1667
+    },
+    "article": "2026-10-16-alexander-vii"
+  },
+  {
+    "from": "Q127254",
+    "rel": "commissioned",
+    "to": "Q1808677",
+    "article": "2026-10-16-alexander-vii"
+  },
+  {
+    "from": "Q160538",
+    "rel": "created",
+    "to": "Q1808677",
+    "years": {
+      "start": 1671,
+      "end": 1678
+    },
+    "article": "2026-10-16-alexander-vii"
+  },
+  {
+    "from": "Q1808677",
+    "rel": "part_of",
+    "to": "Q12512",
+    "article": "2026-10-16-alexander-vii"
+  },
+  {
+    "from": "Q127254",
+    "rel": "commissioned",
+    "to": "Q826635",
+    "years": {
+      "start": 1665
+    },
+    "article": "2026-10-16-alexander-vii"
+  },
+  {
+    "from": "Q160538",
+    "rel": "created",
+    "to": "Q826635",
+    "years": {
+      "start": 1665,
+      "end": 1667
+    },
+    "article": "2026-10-16-alexander-vii"
+  },
+  {
+    "from": "Q1348674",
+    "rel": "created",
+    "to": "Q826635",
+    "years": {
+      "start": 1667
+    },
+    "article": "2026-10-16-alexander-vii"
+  },
+  {
+    "from": "Q826635",
+    "rel": "located_in",
+    "to": "Q2518575",
+    "article": "2026-10-16-alexander-vii"
+  },
+  {
+    "from": "Q2518575",
+    "rel": "located_in",
+    "to": "Q220",
+    "article": "2026-10-16-alexander-vii"
+  },
+  {
+    "from": "Q127254",
+    "rel": "commissioned",
+    "to": "Q733893",
+    "article": "2026-10-16-alexander-vii"
+  },
+  {
+    "from": "Q127254",
+    "rel": "commissioned",
+    "to": "Q1073397",
+    "article": "2026-10-16-alexander-vii"
+  },
+  {
+    "from": "Q160538",
+    "rel": "created",
+    "to": "Q1073397",
+    "years": {
+      "start": 1663,
+      "end": 1666
+    },
+    "article": "2026-10-16-alexander-vii"
+  },
+  {
+    "from": "Q1073397",
+    "rel": "located_in",
+    "to": "Q237",
+    "article": "2026-10-16-alexander-vii"
+  },
+  {
+    "from": "Q127254",
+    "rel": "involved_in",
+    "to": "Q150995",
+    "years": {
+      "start": 1648
+    },
+    "article": "2026-10-16-alexander-vii"
+  },
+  {
+    "from": "Q127254",
+    "rel": "buried_in",
+    "to": "Q12512",
+    "years": {
+      "start": 1667
+    },
+    "article": "2026-10-16-alexander-vii"
+  },
+  {
+    "from": "Q160538",
+    "rel": "created",
+    "to": "Q1760057",
+    "years": {
+      "start": 1655
+    },
+    "article": "2026-10-16-alexander-vii"
+  },
+  {
+    "from": "Q1760057",
+    "rel": "located_in",
+    "to": "Q220",
+    "article": "2026-10-16-alexander-vii"
+  },
+  {
+    "from": "Q52937",
+    "rel": "buried_in",
+    "to": "Q12512",
+    "years": {
+      "start": 1689
+    },
+    "article": "2026-10-16-alexander-vii"
+  },
+  {
+    "from": "Q127254",
+    "rel": "commissioned",
+    "to": "Q83425",
+    "years": {
+      "start": 1656
+    },
+    "article": "2026-10-19-st-peters-square"
+  },
+  {
+    "from": "Q160538",
+    "rel": "created",
+    "to": "Q83425",
+    "years": {
+      "start": 1656,
+      "end": 1667
+    },
+    "article": "2026-10-19-st-peters-square"
+  },
+  {
+    "from": "Q83425",
+    "rel": "located_in",
+    "to": "Q237",
+    "article": "2026-10-19-st-peters-square"
+  },
+  {
+    "from": "Q1444766",
+    "rel": "located_in",
+    "to": "Q83425",
+    "years": {
+      "start": 1586
+    },
+    "article": "2026-10-19-st-peters-square"
+  },
+  {
+    "from": "Q1409",
+    "rel": "relocated",
+    "to": "Q1444766",
+    "years": {
+      "start": 37
+    },
+    "article": "2026-10-19-st-peters-square"
+  },
+  {
+    "from": "Q336806",
+    "rel": "relocated",
+    "to": "Q1444766",
+    "years": {
+      "start": 1586
+    },
+    "article": "2026-10-19-st-peters-square"
+  },
+  {
+    "from": "Q133350",
+    "rel": "patron_of",
+    "to": "Q336806",
+    "years": {
+      "start": 1585,
+      "end": 1590
+    },
+    "article": "2026-10-19-st-peters-square"
+  },
+  {
+    "from": "Q23559",
+    "rel": "commissioned",
+    "to": "Q1140395",
+    "years": {
+      "start": 1936
+    },
+    "article": "2026-10-19-st-peters-square"
+  },
+  {
+    "from": "Q1140395",
+    "rel": "located_in",
+    "to": "Q220",
+    "article": "2026-10-19-st-peters-square"
+  },
+  {
+    "from": "Q193270",
+    "rel": "influenced",
+    "to": "Q1140395",
+    "article": "2026-10-19-st-peters-square"
+  },
+  {
+    "from": "Q23559",
+    "rel": "involved_in",
+    "to": "Q193270",
+    "years": {
+      "start": 1929
+    },
+    "article": "2026-10-19-st-peters-square"
+  },
+  {
+    "from": "Q237",
+    "rel": "located_in",
+    "to": "Q220",
+    "article": "2026-10-19-st-peters-square"
+  },
+  {
+    "from": "Q80516",
+    "rel": "commissioned",
+    "to": "Q12512",
+    "years": {
+      "start": 1506
+    },
+    "article": "2026-10-21-st-peters-basilica"
+  },
+  {
+    "from": "Q7793",
+    "rel": "created",
+    "to": "Q12512",
+    "years": {
+      "start": 1506,
+      "end": 1514
+    },
+    "article": "2026-10-21-st-peters-basilica"
+  },
+  {
+    "from": "Q5592",
+    "rel": "created",
+    "to": "Q12512",
+    "years": {
+      "start": 1547,
+      "end": 1564
+    },
+    "article": "2026-10-21-st-peters-basilica"
+  },
+  {
+    "from": "Q175566",
+    "rel": "created",
+    "to": "Q12512",
+    "years": {
+      "start": 1588,
+      "end": 1590
+    },
+    "article": "2026-10-21-st-peters-basilica"
+  },
+  {
+    "from": "Q336806",
+    "rel": "created",
+    "to": "Q12512",
+    "years": {
+      "start": 1588,
+      "end": 1590
+    },
+    "article": "2026-10-21-st-peters-basilica"
+  },
+  {
+    "from": "Q122328",
+    "rel": "created",
+    "to": "Q12512",
+    "years": {
+      "start": 1607,
+      "end": 1626
+    },
+    "article": "2026-10-21-st-peters-basilica"
+  },
+  {
+    "from": "Q12512",
+    "rel": "located_in",
+    "to": "Q237",
+    "article": "2026-10-21-st-peters-basilica"
+  },
+  {
+    "from": "Q131579",
+    "rel": "commissioned",
+    "to": "Q2439030",
+    "years": {
+      "start": 1623
+    },
+    "article": "2026-10-21-st-peters-basilica"
+  },
+  {
+    "from": "Q160538",
+    "rel": "created",
+    "to": "Q2439030",
+    "years": {
+      "start": 1623,
+      "end": 1634
+    },
+    "article": "2026-10-21-st-peters-basilica"
+  },
+  {
+    "from": "Q2439030",
+    "rel": "part_of",
+    "to": "Q12512",
+    "article": "2026-10-21-st-peters-basilica"
+  },
+  {
+    "from": "Q131579",
+    "rel": "patron_of",
+    "to": "Q160538",
+    "years": {
+      "start": 1623,
+      "end": 1644
+    },
+    "article": "2026-10-21-st-peters-basilica"
+  },
+  {
+    "from": "Q160538",
+    "rel": "created",
+    "to": "Q733893",
+    "years": {
+      "start": 1657,
+      "end": 1666
+    },
+    "article": "2026-10-21-st-peters-basilica"
+  },
+  {
+    "from": "Q733893",
+    "rel": "part_of",
+    "to": "Q12512",
+    "article": "2026-10-21-st-peters-basilica"
+  },
+  {
+    "from": "Q131579",
+    "rel": "commissioned",
+    "to": "Q3955657",
+    "article": "2026-10-21-st-peters-basilica"
+  },
+  {
+    "from": "Q160538",
+    "rel": "created",
+    "to": "Q3955657",
+    "years": {
+      "start": 1628,
+      "end": 1647
+    },
+    "article": "2026-10-21-st-peters-basilica"
+  },
+  {
+    "from": "Q3955657",
+    "rel": "part_of",
+    "to": "Q12512",
+    "article": "2026-10-21-st-peters-basilica"
+  },
+  {
+    "from": "Q131579",
+    "rel": "buried_in",
+    "to": "Q12512",
+    "years": {
+      "start": 1644
+    },
+    "article": "2026-10-21-st-peters-basilica"
+  },
+  {
+    "from": "Q5592",
+    "rel": "created",
+    "to": "Q235242",
+    "years": {
+      "start": 1498,
+      "end": 1499
+    },
+    "article": "2026-10-21-st-peters-basilica"
+  },
+  {
+    "from": "Q235242",
+    "rel": "located_in",
+    "to": "Q12512",
+    "article": "2026-10-21-st-peters-basilica"
+  },
+  {
+    "from": "Q167065",
+    "rel": "commissioned",
+    "to": "Q186282",
+    "years": {
+      "start": 432,
+      "approx": true
+    },
+    "article": "2026-10-23-santa-maria-maggiore"
+  },
+  {
+    "from": "Q184332",
+    "rel": "influenced",
+    "to": "Q186282",
+    "article": "2026-10-23-santa-maria-maggiore"
+  },
+  {
+    "from": "Q1357805",
+    "rel": "created",
+    "to": "Q186282",
+    "years": {
+      "start": 1741,
+      "end": 1743
+    },
+    "article": "2026-10-23-santa-maria-maggiore"
+  },
+  {
+    "from": "Q372066",
+    "rel": "created",
+    "to": "Q186282",
+    "years": {
+      "start": 1673
+    },
+    "article": "2026-10-23-santa-maria-maggiore"
+  },
+  {
+    "from": "Q160538",
+    "rel": "buried_in",
+    "to": "Q186282",
+    "years": {
+      "start": 1680
+    },
+    "article": "2026-10-23-santa-maria-maggiore"
+  },
+  {
+    "from": "Q450675",
+    "rel": "buried_in",
+    "to": "Q186282",
+    "years": {
+      "start": 2025
+    },
+    "article": "2026-10-23-santa-maria-maggiore"
+  },
+  {
+    "from": "Q133350",
+    "rel": "buried_in",
+    "to": "Q186282",
+    "years": {
+      "start": 1590
+    },
+    "article": "2026-10-23-santa-maria-maggiore"
+  },
+  {
+    "from": "Q117667146",
+    "rel": "located_in",
+    "to": "Q186282",
+    "article": "2026-10-23-santa-maria-maggiore"
+  },
+  {
+    "from": "Q186282",
+    "rel": "located_in",
+    "to": "Q220",
+    "article": "2026-10-23-santa-maria-maggiore"
+  },
+  {
+    "from": "Q160538",
+    "rel": "rival_of",
+    "to": "Q123150",
+    "article": "2026-10-26-bernini-and-borromini"
+  },
+  {
+    "from": "Q160538",
+    "rel": "born_in",
+    "to": "Q2634",
+    "years": {
+      "start": 1598
+    },
+    "article": "2026-10-26-bernini-and-borromini"
+  },
+  {
+    "from": "Q160538",
+    "rel": "died_in",
+    "to": "Q220",
+    "years": {
+      "start": 1680
+    },
+    "article": "2026-10-26-bernini-and-borromini"
+  },
+  {
+    "from": "Q123150",
+    "rel": "born_in",
+    "to": "Q69269",
+    "years": {
+      "start": 1599
+    },
+    "article": "2026-10-26-bernini-and-borromini"
+  },
+  {
+    "from": "Q123150",
+    "rel": "died_in",
+    "to": "Q220",
+    "years": {
+      "start": 1667
+    },
+    "article": "2026-10-26-bernini-and-borromini"
+  },
+  {
+    "from": "Q123150",
+    "rel": "buried_in",
+    "to": "Q1629700",
+    "years": {
+      "start": 1667
+    },
+    "article": "2026-10-26-bernini-and-borromini"
+  },
+  {
+    "from": "Q122328",
+    "rel": "buried_in",
+    "to": "Q1629700",
+    "years": {
+      "start": 1629
+    },
+    "article": "2026-10-26-bernini-and-borromini"
+  },
+  {
+    "from": "Q122328",
+    "rel": "relative_of",
+    "to": "Q123150",
+    "article": "2026-10-26-bernini-and-borromini"
+  },
+  {
+    "from": "Q122328",
+    "rel": "influenced",
+    "to": "Q123150",
+    "article": "2026-10-26-bernini-and-borromini"
+  },
+  {
+    "from": "Q1629700",
+    "rel": "located_in",
+    "to": "Q220",
+    "article": "2026-10-26-bernini-and-borromini"
+  },
+  {
+    "from": "Q101266",
+    "rel": "commissioned",
+    "to": "Q655470",
+    "years": {
+      "start": 1648
+    },
+    "article": "2026-10-26-bernini-and-borromini"
+  },
+  {
+    "from": "Q160538",
+    "rel": "created",
+    "to": "Q655470",
+    "years": {
+      "start": 1648,
+      "end": 1651
+    },
+    "article": "2026-10-26-bernini-and-borromini"
+  },
+  {
+    "from": "Q160538",
+    "rel": "created",
+    "to": "Q7848306",
+    "years": {
+      "start": 1645,
+      "end": 1652,
+      "approx": true
+    },
+    "article": "2026-10-26-bernini-and-borromini"
+  },
+  {
+    "from": "Q7848306",
+    "rel": "located_in",
+    "to": "Q841506",
+    "article": "2026-10-26-bernini-and-borromini"
+  },
+  {
+    "from": "Q841506",
+    "rel": "located_in",
+    "to": "Q220",
+    "article": "2026-10-26-bernini-and-borromini"
+  },
+  {
+    "from": "Q123150",
+    "rel": "created",
+    "to": "Q867329",
+    "years": {
+      "start": 1638,
+      "end": 1677
+    },
+    "article": "2026-10-26-bernini-and-borromini"
+  },
+  {
+    "from": "Q867329",
+    "rel": "located_in",
+    "to": "Q220",
+    "article": "2026-10-26-bernini-and-borromini"
+  },
+  {
+    "from": "Q160538",
+    "rel": "created",
+    "to": "Q1354667",
+    "years": {
+      "start": 1658,
+      "end": 1670
+    },
+    "article": "2026-10-26-bernini-and-borromini"
+  },
+  {
+    "from": "Q1354667",
+    "rel": "located_in",
+    "to": "Q220",
+    "article": "2026-10-26-bernini-and-borromini"
+  },
+  {
+    "from": "Q123150",
+    "rel": "created",
+    "to": "Q1324617",
+    "years": {
+      "start": 1642,
+      "end": 1660
+    },
+    "article": "2026-10-26-bernini-and-borromini"
+  },
+  {
+    "from": "Q1324617",
+    "rel": "located_in",
+    "to": "Q220",
+    "article": "2026-10-26-bernini-and-borromini"
+  },
+  {
+    "from": "Q154358",
+    "rel": "created",
+    "to": "Q3697674",
+    "years": {
+      "start": 1753
+    },
+    "article": "2026-10-28-veiled-christ"
+  },
+  {
+    "from": "Q119049",
+    "rel": "commissioned",
+    "to": "Q3697674",
+    "article": "2026-10-28-veiled-christ"
+  },
+  {
+    "from": "Q3697674",
+    "rel": "located_in",
+    "to": "Q897839",
+    "article": "2026-10-28-veiled-christ"
+  },
+  {
+    "from": "Q897839",
+    "rel": "located_in",
+    "to": "Q2634",
+    "article": "2026-10-28-veiled-christ"
+  },
+  {
+    "from": "Q601707",
+    "rel": "influenced",
+    "to": "Q154358",
+    "article": "2026-10-28-veiled-christ"
+  },
+  {
+    "from": "Q601707",
+    "rel": "created",
+    "to": "Q30908922",
+    "years": {
+      "start": 1752
+    },
+    "article": "2026-10-28-veiled-christ"
+  },
+  {
+    "from": "Q30908922",
+    "rel": "located_in",
+    "to": "Q897839",
+    "article": "2026-10-28-veiled-christ"
+  },
+  {
+    "from": "Q3750515",
+    "rel": "created",
+    "to": "Q121863942",
+    "years": {
+      "start": 1753,
+      "end": 1754,
+      "approx": true
+    },
+    "article": "2026-10-28-veiled-christ"
+  },
+  {
+    "from": "Q121863942",
+    "rel": "located_in",
+    "to": "Q897839",
+    "article": "2026-10-28-veiled-christ"
+  },
+  {
+    "from": "Q727818",
+    "rel": "commissioned",
+    "to": "Q2981",
+    "years": {
+      "start": 1163
+    },
+    "article": "2026-10-30-notre-dame-de-paris"
+  },
+  {
+    "from": "Q2981",
+    "rel": "located_in",
+    "to": "Q90",
+    "article": "2026-10-30-notre-dame-de-paris"
+  },
+  {
+    "from": "Q3163757",
+    "rel": "restored",
+    "to": "Q2981",
+    "years": {
+      "start": 1844,
+      "end": 1857
+    },
+    "article": "2026-10-30-notre-dame-de-paris"
+  },
+  {
+    "from": "Q272912",
+    "rel": "restored",
+    "to": "Q2981",
+    "years": {
+      "start": 1844,
+      "end": 1864
+    },
+    "article": "2026-10-30-notre-dame-de-paris"
+  },
+  {
+    "from": "Q535",
+    "rel": "created",
+    "to": "Q191380",
+    "years": {
+      "start": 1831
+    },
+    "article": "2026-10-30-notre-dame-de-paris"
+  },
+  {
+    "from": "Q191380",
+    "rel": "depicts",
+    "to": "Q2981",
+    "article": "2026-10-30-notre-dame-de-paris"
+  },
+  {
+    "from": "Q191380",
+    "rel": "influenced",
+    "to": "Q2981",
+    "article": "2026-10-30-notre-dame-de-paris"
+  },
+  {
+    "from": "Q2981",
+    "rel": "involved_in",
+    "to": "Q63167656",
+    "years": {
+      "start": 2019
+    },
+    "article": "2026-10-30-notre-dame-de-paris"
+  },
+  {
+    "from": "Q63167656",
+    "rel": "located_in",
+    "to": "Q90",
+    "article": "2026-10-30-notre-dame-de-paris"
+  },
+  {
+    "from": "Q297",
+    "rel": "created",
+    "to": "Q208758",
+    "years": {
+      "start": 1656
+    },
+    "article": "2026-11-01-las-meninas"
+  },
+  {
+    "from": "Q208758",
+    "rel": "located_in",
+    "to": "Q160112",
+    "article": "2026-11-01-las-meninas"
+  },
+  {
+    "from": "Q160112",
+    "rel": "located_in",
+    "to": "Q2807",
+    "article": "2026-11-01-las-meninas"
+  },
+  {
+    "from": "Q208758",
+    "rel": "depicts",
+    "to": "Q158659",
+    "article": "2026-11-01-las-meninas"
+  },
+  {
+    "from": "Q208758",
+    "rel": "depicts",
+    "to": "Q297",
+    "article": "2026-11-01-las-meninas"
+  },
+  {
+    "from": "Q208758",
+    "rel": "depicts",
+    "to": "Q691402",
+    "article": "2026-11-01-las-meninas"
+  },
+  {
+    "from": "Q208758",
+    "rel": "depicts",
+    "to": "Q311469",
+    "article": "2026-11-01-las-meninas"
+  },
+  {
+    "from": "Q691402",
+    "rel": "patron_of",
+    "to": "Q297",
+    "article": "2026-11-01-las-meninas"
+  },
+  {
+    "from": "Q691402",
+    "rel": "relative_of",
+    "to": "Q158659",
+    "article": "2026-11-01-las-meninas"
+  },
+  {
+    "from": "Q311469",
+    "rel": "relative_of",
+    "to": "Q158659",
+    "article": "2026-11-01-las-meninas"
+  },
+  {
+    "from": "Q691402",
+    "rel": "relative_of",
+    "to": "Q311469",
+    "article": "2026-11-01-las-meninas"
+  },
+  {
+    "from": "Q5593",
+    "rel": "created",
+    "to": "Q283822",
+    "years": {
+      "start": 1957
+    },
+    "article": "2026-11-01-las-meninas"
+  },
+  {
+    "from": "Q283822",
+    "rel": "located_in",
+    "to": "Q1050032",
+    "article": "2026-11-01-las-meninas"
+  },
+  {
+    "from": "Q208758",
+    "rel": "influenced",
+    "to": "Q283822",
+    "article": "2026-11-01-las-meninas"
+  },
+  {
+    "from": "Q297",
+    "rel": "born_in",
+    "to": "Q8717",
+    "years": {
+      "start": 1599
+    },
+    "article": "2026-11-01-las-meninas"
+  },
+  {
+    "from": "Q297",
+    "rel": "died_in",
+    "to": "Q2807",
+    "years": {
+      "start": 1660
+    },
+    "article": "2026-11-01-las-meninas"
+  },
+  {
+    "from": "Q5592",
+    "rel": "created",
+    "to": "Q179900",
+    "years": {
+      "start": 1501,
+      "end": 1504
+    },
+    "article": "2026-11-02-david"
+  },
+  {
+    "from": "Q179900",
+    "rel": "located_in",
+    "to": "Q10855544",
+    "years": {
+      "start": 1873
+    },
+    "article": "2026-11-02-david"
+  },
+  {
+    "from": "Q10855544",
+    "rel": "located_in",
+    "to": "Q2044",
+    "article": "2026-11-02-david"
+  },
+  {
+    "from": "Q762",
+    "rel": "rival_of",
+    "to": "Q5592",
+    "article": "2026-11-02-david"
+  },
+  {
+    "from": "Q762",
+    "rel": "created",
+    "to": "Q2045726",
+    "years": {
+      "start": 1503,
+      "end": 1505
+    },
+    "article": "2026-11-02-david"
+  },
+  {
+    "from": "Q2045726",
+    "rel": "located_in",
+    "to": "Q271928",
+    "article": "2026-11-02-david"
+  },
+  {
+    "from": "Q5592",
+    "rel": "created",
+    "to": "Q2236899",
+    "years": {
+      "start": 1504,
+      "end": 1506,
+      "approx": true
+    },
+    "article": "2026-11-02-david"
+  },
+  {
+    "from": "Q2236899",
+    "rel": "located_in",
+    "to": "Q271928",
+    "article": "2026-11-02-david"
+  },
+  {
+    "from": "Q271928",
+    "rel": "located_in",
+    "to": "Q2044",
+    "article": "2026-11-02-david"
+  },
+  {
+    "from": "Q5592",
+    "rel": "born_in",
+    "to": "Q52069",
+    "years": {
+      "start": 1475
+    },
+    "article": "2026-11-02-david"
+  },
+  {
+    "from": "Q5592",
+    "rel": "died_in",
+    "to": "Q220",
+    "years": {
+      "start": 1564
+    },
+    "article": "2026-11-02-david"
+  },
+  {
+    "from": "Q77237",
+    "rel": "created",
+    "to": "Q125006",
+    "years": {
+      "start": 1867,
+      "end": 1869
+    },
+    "article": "2026-11-04-brooklyn-bridge"
+  },
+  {
+    "from": "Q966054",
+    "rel": "created",
+    "to": "Q125006",
+    "years": {
+      "start": 1869,
+      "end": 1883
+    },
+    "article": "2026-11-04-brooklyn-bridge"
+  },
+  {
+    "from": "Q49902",
+    "rel": "created",
+    "to": "Q125006",
+    "years": {
+      "start": 1872,
+      "end": 1883
+    },
+    "article": "2026-11-04-brooklyn-bridge"
+  },
+  {
+    "from": "Q125006",
+    "rel": "located_in",
+    "to": "Q60",
+    "article": "2026-11-04-brooklyn-bridge"
+  },
+  {
+    "from": "Q77237",
+    "rel": "relative_of",
+    "to": "Q966054",
+    "article": "2026-11-04-brooklyn-bridge"
+  },
+  {
+    "from": "Q966054",
+    "rel": "relative_of",
+    "to": "Q49902",
+    "article": "2026-11-04-brooklyn-bridge"
+  },
+  {
+    "from": "Q77237",
+    "rel": "born_in",
+    "to": "Q14925",
+    "years": {
+      "start": 1806
+    },
+    "article": "2026-11-04-brooklyn-bridge"
+  },
+  {
+    "from": "Q77237",
+    "rel": "created",
+    "to": "Q3397656",
+    "years": {
+      "start": 1851,
+      "end": 1855
+    },
+    "article": "2026-11-04-brooklyn-bridge"
+  },
+  {
+    "from": "Q364350",
+    "rel": "created",
+    "to": "Q734834",
+    "years": {
+      "start": 1420,
+      "end": 1426,
+      "approx": true
+    },
+    "article": "2026-11-06-ghent-altarpiece"
+  },
+  {
+    "from": "Q102272",
+    "rel": "created",
+    "to": "Q734834",
+    "years": {
+      "start": 1426,
+      "end": 1432
+    },
+    "article": "2026-11-06-ghent-altarpiece"
+  },
+  {
+    "from": "Q364350",
+    "rel": "relative_of",
+    "to": "Q102272",
+    "article": "2026-11-06-ghent-altarpiece"
+  },
+  {
+    "from": "Q1841289",
+    "rel": "commissioned",
+    "to": "Q734834",
+    "article": "2026-11-06-ghent-altarpiece"
+  },
+  {
+    "from": "Q734834",
+    "rel": "located_in",
+    "to": "Q938154",
+    "article": "2026-11-06-ghent-altarpiece"
+  },
+  {
+    "from": "Q938154",
+    "rel": "located_in",
+    "to": "Q1296",
+    "article": "2026-11-06-ghent-altarpiece"
+  },
+  {
+    "from": "x:theft-of-the-just-judges",
+    "rel": "stolen_from",
+    "to": "Q938154",
+    "years": {
+      "start": 1934
+    },
+    "article": "2026-11-06-ghent-altarpiece"
+  },
+  {
+    "from": "Q734834",
+    "rel": "involved_in",
+    "to": "x:theft-of-the-just-judges",
+    "years": {
+      "start": 1934
+    },
+    "article": "2026-11-06-ghent-altarpiece"
+  },
+  {
+    "from": "Q119049",
+    "rel": "born_in",
+    "to": "Q51964",
+    "years": {
+      "start": 1710
+    },
+    "article": "2026-11-08-raimondo-di-sangro"
+  },
+  {
+    "from": "Q119049",
+    "rel": "died_in",
+    "to": "Q2634",
+    "years": {
+      "start": 1771
+    },
+    "article": "2026-11-08-raimondo-di-sangro"
+  },
+  {
+    "from": "Q119049",
+    "rel": "buried_in",
+    "to": "Q897839",
+    "years": {
+      "start": 1771
+    },
+    "article": "2026-11-08-raimondo-di-sangro"
+  },
+  {
+    "from": "Q119049",
+    "rel": "commissioned",
+    "to": "Q30908922",
+    "article": "2026-11-08-raimondo-di-sangro"
+  },
+  {
+    "from": "Q119049",
+    "rel": "commissioned",
+    "to": "Q121863942",
+    "article": "2026-11-08-raimondo-di-sangro"
+  },
+  {
+    "from": "Q119049",
+    "rel": "patron_of",
+    "to": "Q154358",
+    "article": "2026-11-08-raimondo-di-sangro"
+  },
+  {
+    "from": "Q119049",
+    "rel": "patron_of",
+    "to": "Q601707",
+    "article": "2026-11-08-raimondo-di-sangro"
+  },
+  {
+    "from": "Q119049",
+    "rel": "patron_of",
+    "to": "Q3750515",
+    "article": "2026-11-08-raimondo-di-sangro"
+  },
+  {
+    "from": "Q191798",
+    "rel": "involved_in",
+    "to": "Q1117470",
+    "years": {
+      "start": 1853,
+      "end": 1870
+    },
+    "article": "2026-11-09-haussmanns-paris"
+  },
+  {
+    "from": "Q7721",
+    "rel": "involved_in",
+    "to": "Q1117470",
+    "years": {
+      "start": 1853,
+      "end": 1870
+    },
+    "article": "2026-11-09-haussmanns-paris"
+  },
+  {
+    "from": "Q528604",
+    "rel": "involved_in",
+    "to": "Q1117470",
+    "article": "2026-11-09-haussmanns-paris"
+  },
+  {
+    "from": "Q390367",
+    "rel": "involved_in",
+    "to": "Q1117470",
+    "article": "2026-11-09-haussmanns-paris"
+  },
+  {
+    "from": "Q979605",
+    "rel": "involved_in",
+    "to": "Q1117470",
+    "article": "2026-11-09-haussmanns-paris"
+  },
+  {
+    "from": "Q1117470",
+    "rel": "located_in",
+    "to": "Q90",
+    "article": "2026-11-09-haussmanns-paris"
+  },
+  {
+    "from": "Q7721",
+    "rel": "patron_of",
+    "to": "Q191798",
+    "years": {
+      "start": 1853,
+      "end": 1870
+    },
+    "article": "2026-11-09-haussmanns-paris"
+  },
+  {
+    "from": "Q390367",
+    "rel": "created",
+    "to": "Q532113",
+    "years": {
+      "start": 1864,
+      "end": 1867
+    },
+    "article": "2026-11-09-haussmanns-paris"
+  },
+  {
+    "from": "Q532113",
+    "rel": "located_in",
+    "to": "Q90",
+    "article": "2026-11-09-haussmanns-paris"
+  },
+  {
+    "from": "Q979605",
+    "rel": "created",
+    "to": "Q692839",
+    "years": {
+      "start": 1858,
+      "end": 1860
+    },
+    "article": "2026-11-09-haussmanns-paris"
+  },
+  {
+    "from": "Q692839",
+    "rel": "located_in",
+    "to": "Q90",
+    "article": "2026-11-09-haussmanns-paris"
+  },
+  {
+    "from": "Q191798",
+    "rel": "born_in",
+    "to": "Q90",
+    "years": {
+      "start": 1809
+    },
+    "article": "2026-11-09-haussmanns-paris"
+  },
+  {
+    "from": "Q191798",
+    "rel": "died_in",
+    "to": "Q90",
+    "years": {
+      "start": 1891
+    },
+    "article": "2026-11-09-haussmanns-paris"
+  },
+  {
+    "from": "Q913185",
+    "rel": "located_in",
+    "to": "Q155975",
+    "article": "2026-11-11-kutna-hora"
+  },
+  {
+    "from": "Q77707",
+    "rel": "created",
+    "to": "Q913185",
+    "years": {
+      "start": 1388
+    },
+    "article": "2026-11-11-kutna-hora"
+  },
+  {
+    "from": "Q3845344",
+    "rel": "created",
+    "to": "Q913185",
+    "years": {
+      "start": 1481,
+      "end": 1489
+    },
+    "article": "2026-11-11-kutna-hora"
+  },
+  {
+    "from": "Q66724",
+    "rel": "created",
+    "to": "Q913185",
+    "years": {
+      "start": 1512
+    },
+    "article": "2026-11-11-kutna-hora"
+  },
+  {
+    "from": "Q731384",
+    "rel": "restored",
+    "to": "Q913185",
+    "years": {
+      "start": 1884,
+      "end": 1899
+    },
+    "article": "2026-11-11-kutna-hora"
+  },
+  {
+    "from": "Q513821",
+    "rel": "located_in",
+    "to": "Q155975",
+    "article": "2026-11-11-kutna-hora"
+  },
+  {
+    "from": "Q472688",
+    "rel": "created",
+    "to": "Q513821",
+    "years": {
+      "start": 1703,
+      "end": 1710
+    },
+    "article": "2026-11-11-kutna-hora"
+  },
+  {
+    "from": "Q1445665",
+    "rel": "created",
+    "to": "Q513821",
+    "years": {
+      "start": 1870
+    },
+    "article": "2026-11-11-kutna-hora"
+  },
+  {
+    "from": "Q61332",
+    "rel": "created",
+    "to": "Q5949",
+    "years": {
+      "start": 1356,
+      "end": 1399
+    },
+    "article": "2026-11-11-kutna-hora"
+  },
+  {
+    "from": "Q61332",
+    "rel": "relative_of",
+    "to": "Q77707",
+    "article": "2026-11-11-kutna-hora"
+  },
+  {
+    "from": "Q5949",
+    "rel": "located_in",
+    "to": "Q1085",
+    "article": "2026-11-11-kutna-hora"
+  },
+  {
+    "from": "Q66724",
+    "rel": "created",
+    "to": "Q1067285",
+    "years": {
+      "start": 1493,
+      "end": 1502
+    },
+    "article": "2026-11-11-kutna-hora"
+  },
+  {
+    "from": "Q1067285",
+    "rel": "located_in",
+    "to": "Q1085",
+    "article": "2026-11-11-kutna-hora"
+  },
+  {
+    "from": "Q734834",
+    "rel": "located_in",
+    "to": "Q1635896",
+    "years": {
+      "start": 1944,
+      "end": 1945
+    },
+    "article": "2026-11-13-monuments-men"
+  },
+  {
+    "from": "Q5592",
+    "rel": "created",
+    "to": "Q567833",
+    "years": {
+      "start": 1501,
+      "end": 1504
+    },
+    "article": "2026-11-13-monuments-men"
+  },
+  {
+    "from": "Q567833",
+    "rel": "located_in",
+    "to": "Q917183",
+    "article": "2026-11-13-monuments-men"
+  },
+  {
+    "from": "Q567833",
+    "rel": "located_in",
+    "to": "Q1635896",
+    "years": {
+      "start": 1944,
+      "end": 1945
+    },
+    "article": "2026-11-13-monuments-men"
+  },
+  {
+    "from": "Q41264",
+    "rel": "created",
+    "to": "Q588695",
+    "years": {
+      "start": 1666,
+      "end": 1668,
+      "approx": true
+    },
+    "article": "2026-11-13-monuments-men"
+  },
+  {
+    "from": "Q588695",
+    "rel": "located_in",
+    "to": "Q95569",
+    "article": "2026-11-13-monuments-men"
+  },
+  {
+    "from": "Q588695",
+    "rel": "located_in",
+    "to": "Q1635896",
+    "years": {
+      "start": 1944,
+      "end": 1945
+    },
+    "article": "2026-11-13-monuments-men"
+  },
+  {
+    "from": "Q16008462",
+    "rel": "involved_in",
+    "to": "Q2273396",
+    "years": {
+      "start": 1944,
+      "end": 1946
+    },
+    "article": "2026-11-13-monuments-men"
+  },
+  {
+    "from": "Q351339",
+    "rel": "involved_in",
+    "to": "Q2273396",
+    "years": {
+      "start": 1944,
+      "end": 1946
+    },
+    "article": "2026-11-13-monuments-men"
+  },
+  {
+    "from": "Q1635896",
+    "rel": "involved_in",
+    "to": "Q2273396",
+    "years": {
+      "start": 1945
+    },
+    "article": "2026-11-13-monuments-men"
+  },
+  {
+    "from": "Q734834",
+    "rel": "involved_in",
+    "to": "Q2273396",
+    "years": {
+      "start": 1945
+    },
+    "article": "2026-11-13-monuments-men"
+  },
+  {
+    "from": "Q567833",
+    "rel": "involved_in",
+    "to": "Q2273396",
+    "years": {
+      "start": 1945
+    },
+    "article": "2026-11-13-monuments-men"
+  },
+  {
+    "from": "Q1700096",
+    "rel": "created",
+    "to": "Q275",
+    "years": {
+      "start": 1882,
+      "end": 1890
+    },
+    "article": "2026-11-15-forth-bridge"
+  },
+  {
+    "from": "Q817394",
+    "rel": "created",
+    "to": "Q275",
+    "years": {
+      "start": 1882,
+      "end": 1890
+    },
+    "article": "2026-11-15-forth-bridge"
+  },
+  {
+    "from": "Q337783",
+    "rel": "created",
+    "to": "Q275",
+    "years": {
+      "start": 1882,
+      "end": 1890
+    },
+    "article": "2026-11-15-forth-bridge"
+  },
+  {
+    "from": "Q275",
+    "rel": "located_in",
+    "to": "Q202083",
+    "article": "2026-11-15-forth-bridge"
+  },
+  {
+    "from": "Q368762",
+    "rel": "created",
+    "to": "Q6480690",
+    "years": {
+      "start": 1871,
+      "end": 1878
+    },
+    "article": "2026-11-15-forth-bridge"
+  },
+  {
+    "from": "Q6480690",
+    "rel": "located_in",
+    "to": "Q123709",
+    "article": "2026-11-15-forth-bridge"
+  },
+  {
+    "from": "Q6480690",
+    "rel": "involved_in",
+    "to": "Q1287158",
+    "years": {
+      "start": 1879
+    },
+    "article": "2026-11-15-forth-bridge"
+  },
+  {
+    "from": "Q1287158",
+    "rel": "influenced",
+    "to": "Q275",
+    "article": "2026-11-15-forth-bridge"
+  },
+  {
+    "from": "Q48319",
+    "rel": "created",
+    "to": "Q1212937",
+    "years": {
+      "start": 1533
+    },
+    "article": "2026-11-16-holbeins-ambassadors"
+  },
+  {
+    "from": "Q1212937",
+    "rel": "located_in",
+    "to": "Q180788",
+    "years": {
+      "start": 1890
+    },
+    "article": "2026-11-16-holbeins-ambassadors"
+  },
+  {
+    "from": "Q180788",
+    "rel": "located_in",
+    "to": "Q84",
+    "article": "2026-11-16-holbeins-ambassadors"
+  },
+  {
+    "from": "Q1212937",
+    "rel": "depicts",
+    "to": "Q3175386",
+    "article": "2026-11-16-holbeins-ambassadors"
+  },
+  {
+    "from": "Q1212937",
+    "rel": "depicts",
+    "to": "Q3103711",
+    "article": "2026-11-16-holbeins-ambassadors"
+  },
+  {
+    "from": "Q3175386",
+    "rel": "commissioned",
+    "to": "Q1212937",
+    "years": {
+      "start": 1533
+    },
+    "article": "2026-11-16-holbeins-ambassadors"
+  },
+  {
+    "from": "Q38370",
+    "rel": "patron_of",
+    "to": "Q48319",
+    "article": "2026-11-16-holbeins-ambassadors"
+  },
+  {
+    "from": "Q48319",
+    "rel": "born_in",
+    "to": "Q2749",
+    "years": {
+      "start": 1497
+    },
+    "article": "2026-11-16-holbeins-ambassadors"
+  },
+  {
+    "from": "Q48319",
+    "rel": "died_in",
+    "to": "Q84",
+    "years": {
+      "start": 1543
+    },
+    "article": "2026-11-16-holbeins-ambassadors"
+  }
+]

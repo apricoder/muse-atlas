@@ -56,7 +56,7 @@ Source of truth: JSON under `site/data/`, loaded by the page directly with `fetc
 
 ```json
 {
-  "id": "Q5592",
+  "id": "Q160538",
   "type": "person",
   "label_uk": "Джан Лоренцо Берніні",
   "label_en": "Gian Lorenzo Bernini",
@@ -64,7 +64,7 @@ Source of truth: JSON under `site/data/`, loaded by the page directly with `fetc
   "country": "IT",
   "kind": "sculpture",
   "coords": [41.9022, 12.4539],
-  "image": "assets/img/q5592.jpg",
+  "image": "assets/img/q160538.jpg",
   "core": true,
   "articles": ["2026-10-14-st-peters-square"],
   "summary_uk": "Італійський скульптор і архітектор доби бароко, автор колонади [площі Святого Петра](node:Q…) …",
@@ -75,11 +75,11 @@ Source of truth: JSON under `site/data/`, loaded by the page directly with `fetc
 
 | field | notes |
 |---|---|
-| `id` | QID or `x:` slug (example QID above is illustrative; verify when adding) |
+| `id` | QID or `x:` slug (always verify a QID on Wikidata before using it) |
 | `type` | `person` \| `work` \| `place` \| `event` \| `movement` |
 | `years` | person: birth–death; work: created/built; event: when (see *Fuzzy dates*) |
 | `country` | ISO 3166-1 alpha-2 (present-day country), for filtering |
-| `kind` | optional: `architecture` \| `painting` \| `sculpture` \| `engineering` \| … |
+| `kind` | optional, one value: `architecture` \| `painting` \| `sculpture` \| `engineering` \| `urbanism` \| `mosaic` \| `literature` \| `patronage` \| `history`. Articles use the same list. One kind per entry for now; a list may be needed later for people who worked in several arts |
 | `coords` | optional `[lat, lon]`, mostly for places and works; copied from Wikidata |
 | `image` | optional; path to the local copy (see *Self-contained assets*) |
 | `core` | main subject of some article, as opposed to merely mentioned |
@@ -90,7 +90,7 @@ Source of truth: JSON under `site/data/`, loaded by the page directly with `fetc
 
 ```json
 {
-  "from": "Q5592",
+  "from": "Q160538",
   "rel": "created",
   "to": "Q…",
   "years": { "start": 1656, "end": 1667 },
@@ -104,14 +104,21 @@ Relation vocabulary (closed list, extend on purpose):
 |---|---|
 | `created` | person → work |
 | `commissioned` | person → work |
-| `located_in` | work/place → place |
-| `born_in` / `died_in` / `buried_in` | person → place |
-| `depicts` | work → person/event |
+| `relocated` | person → work (moved it, e.g. an obelisk) |
+| `located_in` | work/place/event → place/work (`years` for a past location) |
+| `born_in` / `died_in` | person → place |
+| `buried_in` | person → place/work |
+| `depicts` | work → person/event/work/place |
 | `patron_of` | person → person |
 | `rival_of` | person ↔ person (symmetric) |
-| `influenced` | person/work → person/work |
+| `relative_of` | person ↔ person (symmetric; family) |
+| `influenced` | person/work/event → person/work/event |
 | `part_of` | work/place → work/place |
-| `restored` / `stolen_from` / `involved_in` | for events and histories |
+| `restored` | person → work |
+| `stolen_from` | work/event → place/work |
+| `involved_in` | person/work/place → event |
+
+The validator errors on an unknown `rel` and warns when the from/to types don't match this table.
 
 ### Articles (`site/data/articles.json`)
 
@@ -139,12 +146,12 @@ There is no article text and no links to private chat or session pages, only met
 - **Facts:** dates, coords and labels taken from Wikidata are written into the JSON, so nothing is fetched at runtime. The QID is kept only as a reference.
 - **Images:** downloaded into `site/assets/img/` when the entity is added.
   - Fetch a pre-scaled version (Commons `Special:FilePath/<file>?width=1000`) and keep only that, not the original. Aim for about 1000px on the long side and at most about 250 KB each (JPEG/WebP). There is no build step, so no generated thumbnails; the browser scales with CSS and uses `loading="lazy"`.
-  - File name: `<node-id-slug>[-n].<ext>`, for example `q5592.jpg` or `q5592-2.jpg`. Lowercase ASCII only, so URLs never need encoding.
+  - File name: `<node-id-slug>[-n].<ext>`, for example `q160538.jpg` or `q160538-2.jpg`. Lowercase ASCII only, so URLs never need encoding.
   - **Attribution is required**, since most Commons images are CC BY / CC BY-SA. Keep a record for each image in `site/data/images.json`:
     ```json
     {
-      "file": "assets/img/q5592.jpg",
-      "node": "Q5592",
+      "file": "assets/img/q160538.jpg",
+      "node": "Q160538",
       "source": "https://commons.wikimedia.org/wiki/File:<original name>",
       "author": "<author as given on Commons>",
       "license": "CC BY-SA 4.0",
@@ -197,7 +204,7 @@ Plus an **entity side panel**, which opens when a node is clicked in any view. F
 
 Swipe up or down to change position. Swiping down from peek, tapping empty graph space, or pressing back closes it. At full, dragging down shrinks the sheet only when the content is scrolled to the top; otherwise it scrolls the content. Following a link inside the panel keeps the sheet in its current position and moves the graph to the new node behind it. The sheet is built with plain CSS transforms and pointer events, uses `100dvh` and safe-area insets, and needs no library.
 
-The panel's state is in the URL hash (`#/n/Q5592`), so a panel can be linked and bookmarked, and the back button steps back through the nodes you visited. Summary rendering is a few lines of our own code: split paragraphs, escape all text, and turn `[text](node:id)` into links. No Markdown library is needed.
+The panel's state is in the URL hash (`#/n/Q160538`), so a panel can be linked and bookmarked, and the back button steps back through the nodes you visited. Summary rendering is a few lines of our own code: split paragraphs, escape all text, and turn `[text](node:id)` into links. No Markdown library is needed.
 
 Order: v1 is the data plus graph plus entity panel. v2 adds the timeline and map. v3 adds the quiz.
 
@@ -223,18 +230,7 @@ The routine's own prompt and configuration live outside this repo.
 
 ### Backfill
 
-A one-off run seeds the graph from the articles already written:
-
-1. Sant'Agnese in Agone and Algardi's relief "Leo and Attila"
-2. Pope Alexander VII
-3. St Peter's Square
-4. St Peter's Basilica and the Barberini bees
-5. Santa Maria Maggiore
-6. Bernini vs Borromini
-7. The Veiled Christ (Naples)
-8. Notre-Dame de Paris
-9. Las Meninas (Velázquez)
-10. Michelangelo's David
+A one-off run, done in an interactive session, seeds the graph from the 18 articles written between October and mid-November 2026 (listed in `site/data/articles.json`). It follows the same steps as the routine.
 
 ## Privacy
 
@@ -249,7 +245,7 @@ This repo is public. Rules for everything committed, including by the routine:
 
 - **Full article text in the panel.** Each article would be stored as Markdown in `site/articles/<id>.md`, with explicit `[text](node:<id>)` links and inline images listed in `images.json`, and rendered by a small renderer for a limited set of Markdown features. The panel would show the article(s) in which the node is `core` below the summary. This is blocked on privacy: the digest text addresses the reader, so it needs either a public version written for the purpose or a review step before anything is published, not a cleanup by the routine with nobody checking.
 
-## Open questions
+## Decisions
 
-- Should `country` be stored, or derived through `located_in` chains? Stored is simpler.
-- Licence: code (MIT?) vs data (CC0, matching Wikidata). Images keep their own licences per `images.json`.
+- `country` is stored on each node, not derived through `located_in` chains.
+- Licence: code is MIT (`LICENSE`), data in `site/data/` is CC0 1.0 (`LICENSE-DATA.md`), matching Wikidata. Images keep their own licences per `images.json`. Because the data is CC0, summaries must be written in the routine's own words and must not closely paraphrase Wikipedia (which is CC BY-SA).

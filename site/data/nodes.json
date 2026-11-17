@@ -1,0 +1,3151 @@
+[
+  {
+    "id": "Q160538",
+    "type": "person",
+    "label_uk": "Джан Лоренцо Берніні",
+    "label_en": "Gian Lorenzo Bernini",
+    "years": {
+      "start": 1598,
+      "end": 1680
+    },
+    "country": "IT",
+    "kind": "sculpture",
+    "core": true,
+    "articles": [
+      "2026-10-16-alexander-vii",
+      "2026-10-19-st-peters-square",
+      "2026-10-21-st-peters-basilica",
+      "2026-10-23-santa-maria-maggiore",
+      "2026-10-26-bernini-and-borromini"
+    ],
+    "wiki": {
+      "uk": "Лоренцо_Берніні",
+      "en": "Gian_Lorenzo_Bernini"
+    }
+  },
+  {
+    "id": "Q123150",
+    "type": "person",
+    "label_uk": "Франческо Борроміні",
+    "label_en": "Francesco Borromini",
+    "years": {
+      "start": 1599,
+      "end": 1667
+    },
+    "country": "IT",
+    "kind": "architecture",
+    "core": true,
+    "articles": [
+      "2026-10-01-sant-agnese-in-agone",
+      "2026-10-26-bernini-and-borromini"
+    ],
+    "wiki": {
+      "uk": "Франческо_Борроміні",
+      "en": "Francesco_Borromini"
+    }
+  },
+  {
+    "id": "Q101266",
+    "type": "person",
+    "label_uk": "Інокентій X",
+    "label_en": "Pope Innocent X",
+    "years": {
+      "start": 1574,
+      "end": 1655
+    },
+    "country": "IT",
+    "kind": "patronage",
+    "core": false,
+    "articles": [
+      "2026-10-01-sant-agnese-in-agone",
+      "2026-10-26-bernini-and-borromini"
+    ],
+    "wiki": {
+      "uk": "Інокентій_X",
+      "en": "Pope_Innocent_X"
+    }
+  },
+  {
+    "id": "Q127254",
+    "type": "person",
+    "label_uk": "Олександр VII",
+    "label_en": "Pope Alexander VII",
+    "years": {
+      "start": 1599,
+      "end": 1667
+    },
+    "country": "IT",
+    "kind": "patronage",
+    "core": true,
+    "articles": [
+      "2026-10-16-alexander-vii",
+      "2026-10-19-st-peters-square"
+    ],
+    "wiki": {
+      "uk": "Олександр_VII",
+      "en": "Pope_Alexander_VII"
+    }
+  },
+  {
+    "id": "Q131579",
+    "type": "person",
+    "label_uk": "Урбан VIII",
+    "label_en": "Pope Urban VIII",
+    "years": {
+      "start": 1568,
+      "end": 1644
+    },
+    "country": "IT",
+    "kind": "patronage",
+    "core": true,
+    "articles": [
+      "2026-10-21-st-peters-basilica"
+    ],
+    "wiki": {
+      "uk": "Урбан_VIII",
+      "en": "Pope_Urban_VIII"
+    }
+  },
+  {
+    "id": "Q336798",
+    "type": "person",
+    "label_uk": "Алессандро Альґарді",
+    "label_en": "Alessandro Algardi",
+    "years": {
+      "start": 1598,
+      "end": 1654
+    },
+    "country": "IT",
+    "kind": "sculpture",
+    "core": false,
+    "articles": [
+      "2026-10-01-sant-agnese-in-agone"
+    ],
+    "wiki": {
+      "uk": "Алессандро_Альґарді",
+      "en": "Alessandro_Algardi"
+    }
+  },
+  {
+    "id": "Q372066",
+    "type": "person",
+    "label_uk": "Карло Райнальді",
+    "label_en": "Carlo Rainaldi",
+    "years": {
+      "start": 1611,
+      "end": 1691
+    },
+    "country": "IT",
+    "kind": "architecture",
+    "core": false,
+    "articles": [
+      "2026-10-01-sant-agnese-in-agone",
+      "2026-10-23-santa-maria-maggiore"
+    ],
+    "wiki": {
+      "uk": "Карло_Райнальді",
+      "en": "Carlo_Rainaldi"
+    }
+  },
+  {
+    "id": "Q1348674",
+    "type": "person",
+    "label_uk": "Ерколе Феррата",
+    "label_en": "Ercole Ferrata",
+    "years": {
+      "start": 1610,
+      "end": 1686
+    },
+    "country": "IT",
+    "kind": "sculpture",
+    "core": false,
+    "articles": [
+      "2026-10-01-sant-agnese-in-agone",
+      "2026-10-16-alexander-vii"
+    ],
+    "wiki": {
+      "uk": "Ерколе_Феррата",
+      "en": "Ercole_Ferrata"
+    }
+  },
+  {
+    "id": "Q122328",
+    "type": "person",
+    "label_uk": "Карло Мадерно",
+    "label_en": "Carlo Maderno",
+    "years": {
+      "start": 1556,
+      "end": 1629
+    },
+    "country": "IT",
+    "kind": "architecture",
+    "core": false,
+    "articles": [
+      "2026-10-21-st-peters-basilica",
+      "2026-10-26-bernini-and-borromini"
+    ],
+    "wiki": {
+      "uk": "Карло_Мадерно",
+      "en": "Carlo_Maderno"
+    }
+  },
+  {
+    "id": "Q336806",
+    "type": "person",
+    "label_uk": "Доменіко Фонтана",
+    "label_en": "Domenico Fontana",
+    "years": {
+      "start": 1543,
+      "end": 1607
+    },
+    "country": "IT",
+    "kind": "architecture",
+    "core": false,
+    "articles": [
+      "2026-10-19-st-peters-square",
+      "2026-10-21-st-peters-basilica"
+    ],
+    "wiki": {
+      "uk": "Доменіко_Фонтана",
+      "en": "Domenico_Fontana"
+    }
+  },
+  {
+    "id": "Q133350",
+    "type": "person",
+    "label_uk": "Сікст V",
+    "label_en": "Pope Sixtus V",
+    "years": {
+      "start": 1521,
+      "end": 1590
+    },
+    "country": "IT",
+    "kind": "patronage",
+    "core": false,
+    "articles": [
+      "2026-10-19-st-peters-square",
+      "2026-10-23-santa-maria-maggiore"
+    ],
+    "wiki": {
+      "uk": "Сікст_V",
+      "en": "Pope_Sixtus_V"
+    }
+  },
+  {
+    "id": "Q1409",
+    "type": "person",
+    "label_uk": "Калігула",
+    "label_en": "Caligula",
+    "years": {
+      "start": 12,
+      "end": 41
+    },
+    "country": "IT",
+    "kind": "history",
+    "core": false,
+    "articles": [
+      "2026-10-19-st-peters-square"
+    ],
+    "wiki": {
+      "uk": "Калігула",
+      "en": "Caligula"
+    }
+  },
+  {
+    "id": "Q23559",
+    "type": "person",
+    "label_uk": "Беніто Муссоліні",
+    "label_en": "Benito Mussolini",
+    "years": {
+      "start": 1883,
+      "end": 1945
+    },
+    "country": "IT",
+    "kind": "history",
+    "core": false,
+    "articles": [
+      "2026-10-19-st-peters-square"
+    ],
+    "wiki": {
+      "uk": "Беніто_Муссоліні",
+      "en": "Benito_Mussolini"
+    }
+  },
+  {
+    "id": "Q80516",
+    "type": "person",
+    "label_uk": "Юлій II",
+    "label_en": "Pope Julius II",
+    "years": {
+      "start": 1443,
+      "end": 1513
+    },
+    "country": "IT",
+    "kind": "patronage",
+    "core": false,
+    "articles": [
+      "2026-10-21-st-peters-basilica"
+    ],
+    "wiki": {
+      "uk": "Юлій_II",
+      "en": "Pope_Julius_II"
+    }
+  },
+  {
+    "id": "Q7793",
+    "type": "person",
+    "label_uk": "Донато Браманте",
+    "label_en": "Donato Bramante",
+    "years": {
+      "start": 1444,
+      "end": 1514
+    },
+    "country": "IT",
+    "kind": "architecture",
+    "core": false,
+    "articles": [
+      "2026-10-21-st-peters-basilica"
+    ],
+    "wiki": {
+      "uk": "Донато_Браманте",
+      "en": "Donato_Bramante"
+    }
+  },
+  {
+    "id": "Q5592",
+    "type": "person",
+    "label_uk": "Мікеланджело Буонарроті",
+    "label_en": "Michelangelo",
+    "years": {
+      "start": 1475,
+      "end": 1564
+    },
+    "country": "IT",
+    "kind": "sculpture",
+    "core": true,
+    "articles": [
+      "2026-10-21-st-peters-basilica",
+      "2026-11-02-david",
+      "2026-11-13-monuments-men"
+    ],
+    "wiki": {
+      "uk": "Мікеланджело_Буонарроті",
+      "en": "Michelangelo"
+    }
+  },
+  {
+    "id": "Q175566",
+    "type": "person",
+    "label_uk": "Джакомо делла Порта",
+    "label_en": "Giacomo della Porta",
+    "years": {
+      "start": 1532,
+      "end": 1602
+    },
+    "country": "IT",
+    "kind": "architecture",
+    "core": false,
+    "articles": [
+      "2026-10-21-st-peters-basilica"
+    ],
+    "wiki": {
+      "uk": "Джакомо_делла_Порта",
+      "en": "Giacomo_della_Porta"
+    }
+  },
+  {
+    "id": "Q52937",
+    "type": "person",
+    "label_uk": "Христина Шведська",
+    "label_en": "Christina, Queen of Sweden",
+    "years": {
+      "start": 1626,
+      "end": 1689
+    },
+    "country": "SE",
+    "kind": "history",
+    "core": false,
+    "articles": [
+      "2026-10-16-alexander-vii"
+    ],
+    "wiki": {
+      "uk": "Христина_I",
+      "en": "Christina,_Queen_of_Sweden"
+    }
+  },
+  {
+    "id": "Q167065",
+    "type": "person",
+    "label_uk": "Сікст III",
+    "label_en": "Pope Sixtus III",
+    "years": {
+      "start": 390,
+      "end": 440,
+      "approx": true
+    },
+    "country": "IT",
+    "kind": "patronage",
+    "core": false,
+    "articles": [
+      "2026-10-23-santa-maria-maggiore"
+    ],
+    "wiki": {
+      "uk": "Сікст_III",
+      "en": "Pope_Sixtus_III"
+    }
+  },
+  {
+    "id": "Q450675",
+    "type": "person",
+    "label_uk": "Папа Франциск",
+    "label_en": "Pope Francis",
+    "years": {
+      "start": 1936,
+      "end": 2025
+    },
+    "country": "VA",
+    "core": false,
+    "articles": [
+      "2026-10-23-santa-maria-maggiore"
+    ],
+    "wiki": {
+      "uk": "Франциск_(папа)",
+      "en": "Pope_Francis"
+    }
+  },
+  {
+    "id": "Q1357805",
+    "type": "person",
+    "label_uk": "Фердінандо Фуга",
+    "label_en": "Ferdinando Fuga",
+    "years": {
+      "start": 1699,
+      "end": 1782
+    },
+    "country": "IT",
+    "kind": "architecture",
+    "core": false,
+    "articles": [
+      "2026-10-23-santa-maria-maggiore"
+    ],
+    "wiki": {
+      "en": "Ferdinando_Fuga"
+    }
+  },
+  {
+    "id": "Q154358",
+    "type": "person",
+    "label_uk": "Джузеппе Санмартіно",
+    "label_en": "Giuseppe Sanmartino",
+    "years": {
+      "start": 1720,
+      "end": 1793
+    },
+    "country": "IT",
+    "kind": "sculpture",
+    "core": true,
+    "articles": [
+      "2026-10-28-veiled-christ",
+      "2026-11-08-raimondo-di-sangro"
+    ],
+    "wiki": {
+      "uk": "Джузеппе_Санмартіно",
+      "en": "Giuseppe_Sanmartino"
+    }
+  },
+  {
+    "id": "Q119049",
+    "type": "person",
+    "label_uk": "Раймондо ді Сангро",
+    "label_en": "Raimondo di Sangro",
+    "years": {
+      "start": 1710,
+      "end": 1771
+    },
+    "country": "IT",
+    "kind": "patronage",
+    "core": true,
+    "articles": [
+      "2026-10-28-veiled-christ",
+      "2026-11-08-raimondo-di-sangro"
+    ],
+    "wiki": {
+      "en": "Raimondo_di_Sangro"
+    }
+  },
+  {
+    "id": "Q601707",
+    "type": "person",
+    "label_uk": "Антоніо Коррадіні",
+    "label_en": "Antonio Corradini",
+    "years": {
+      "start": 1688,
+      "end": 1752
+    },
+    "country": "IT",
+    "kind": "sculpture",
+    "core": false,
+    "articles": [
+      "2026-10-28-veiled-christ",
+      "2026-11-08-raimondo-di-sangro"
+    ],
+    "wiki": {
+      "en": "Antonio_Corradini"
+    }
+  },
+  {
+    "id": "Q3750515",
+    "type": "person",
+    "label_uk": "Франческо Квейроло",
+    "label_en": "Francesco Queirolo",
+    "years": {
+      "start": 1704,
+      "end": 1762
+    },
+    "country": "IT",
+    "kind": "sculpture",
+    "core": false,
+    "articles": [
+      "2026-10-28-veiled-christ",
+      "2026-11-08-raimondo-di-sangro"
+    ],
+    "wiki": {
+      "en": "Francesco_Queirolo"
+    }
+  },
+  {
+    "id": "Q727818",
+    "type": "person",
+    "label_uk": "Моріс де Сюллі",
+    "label_en": "Maurice de Sully",
+    "years": {
+      "start": 1120,
+      "end": 1196,
+      "approx": true
+    },
+    "country": "FR",
+    "kind": "patronage",
+    "core": false,
+    "articles": [
+      "2026-10-30-notre-dame-de-paris"
+    ],
+    "wiki": {
+      "uk": "Моріс_де_Сюллі",
+      "en": "Maurice_de_Sully"
+    }
+  },
+  {
+    "id": "Q272912",
+    "type": "person",
+    "label_uk": "Ежен Віолле-ле-Дюк",
+    "label_en": "Eugène Viollet-le-Duc",
+    "years": {
+      "start": 1814,
+      "end": 1879
+    },
+    "country": "FR",
+    "kind": "architecture",
+    "core": false,
+    "articles": [
+      "2026-10-30-notre-dame-de-paris"
+    ],
+    "wiki": {
+      "uk": "Ежен_Віолле-ле-Дюк",
+      "en": "Eugène_Viollet-le-Duc"
+    }
+  },
+  {
+    "id": "Q3163757",
+    "type": "person",
+    "label_uk": "Жан-Батіст Лассю",
+    "label_en": "Jean-Baptiste Lassus",
+    "years": {
+      "start": 1807,
+      "end": 1857
+    },
+    "country": "FR",
+    "kind": "architecture",
+    "core": false,
+    "articles": [
+      "2026-10-30-notre-dame-de-paris"
+    ],
+    "wiki": {
+      "en": "Jean-Baptiste_Lassus"
+    }
+  },
+  {
+    "id": "Q535",
+    "type": "person",
+    "label_uk": "Віктор Гюго",
+    "label_en": "Victor Hugo",
+    "years": {
+      "start": 1802,
+      "end": 1885
+    },
+    "country": "FR",
+    "kind": "literature",
+    "core": false,
+    "articles": [
+      "2026-10-30-notre-dame-de-paris"
+    ],
+    "wiki": {
+      "uk": "Віктор_Гюго",
+      "en": "Victor_Hugo"
+    }
+  },
+  {
+    "id": "Q297",
+    "type": "person",
+    "label_uk": "Дієго Веласкес",
+    "label_en": "Diego Velázquez",
+    "years": {
+      "start": 1599,
+      "end": 1660
+    },
+    "country": "ES",
+    "kind": "painting",
+    "core": true,
+    "articles": [
+      "2026-11-01-las-meninas"
+    ],
+    "wiki": {
+      "uk": "Дієго_Веласкес",
+      "en": "Diego_Velázquez"
+    }
+  },
+  {
+    "id": "Q158659",
+    "type": "person",
+    "label_uk": "Маргарита Тереза Іспанська",
+    "label_en": "Margaret Theresa of Spain",
+    "years": {
+      "start": 1651,
+      "end": 1673
+    },
+    "country": "ES",
+    "core": false,
+    "articles": [
+      "2026-11-01-las-meninas"
+    ],
+    "wiki": {
+      "uk": "Маргарита_Тереза_Іспанська",
+      "en": "Margaret_Theresa_of_Spain"
+    }
+  },
+  {
+    "id": "Q691402",
+    "type": "person",
+    "label_uk": "Філіп IV",
+    "label_en": "Philip IV of Spain",
+    "years": {
+      "start": 1605,
+      "end": 1665
+    },
+    "country": "ES",
+    "kind": "patronage",
+    "core": false,
+    "articles": [
+      "2026-11-01-las-meninas"
+    ],
+    "wiki": {
+      "uk": "Філіпп_IV_Великий",
+      "en": "Philip_IV_of_Spain"
+    }
+  },
+  {
+    "id": "Q311469",
+    "type": "person",
+    "label_uk": "Маріанна Австрійська",
+    "label_en": "Mariana of Austria",
+    "years": {
+      "start": 1634,
+      "end": 1696
+    },
+    "country": "ES",
+    "core": false,
+    "articles": [
+      "2026-11-01-las-meninas"
+    ],
+    "wiki": {
+      "uk": "Маріанна_Австрійська",
+      "en": "Mariana_of_Austria"
+    }
+  },
+  {
+    "id": "Q5593",
+    "type": "person",
+    "label_uk": "Пабло Пікассо",
+    "label_en": "Pablo Picasso",
+    "years": {
+      "start": 1881,
+      "end": 1973
+    },
+    "country": "ES",
+    "kind": "painting",
+    "core": false,
+    "articles": [
+      "2026-11-01-las-meninas"
+    ],
+    "wiki": {
+      "uk": "Пабло_Пікассо",
+      "en": "Pablo_Picasso"
+    }
+  },
+  {
+    "id": "Q762",
+    "type": "person",
+    "label_uk": "Леонардо да Вінчі",
+    "label_en": "Leonardo da Vinci",
+    "years": {
+      "start": 1452,
+      "end": 1519
+    },
+    "country": "IT",
+    "kind": "painting",
+    "core": false,
+    "articles": [
+      "2026-11-02-david"
+    ],
+    "wiki": {
+      "uk": "Леонардо_да_Вінчі",
+      "en": "Leonardo_da_Vinci"
+    }
+  },
+  {
+    "id": "Q77237",
+    "type": "person",
+    "label_uk": "Джон Роблінг",
+    "label_en": "John A. Roebling",
+    "years": {
+      "start": 1806,
+      "end": 1869
+    },
+    "country": "US",
+    "kind": "engineering",
+    "core": true,
+    "articles": [
+      "2026-11-04-brooklyn-bridge"
+    ],
+    "wiki": {
+      "uk": "Джон_Роблінг",
+      "en": "John_A._Roebling"
+    }
+  },
+  {
+    "id": "Q966054",
+    "type": "person",
+    "label_uk": "Вашингтон Роблінг",
+    "label_en": "Washington Roebling",
+    "years": {
+      "start": 1837,
+      "end": 1926
+    },
+    "country": "US",
+    "kind": "engineering",
+    "core": true,
+    "articles": [
+      "2026-11-04-brooklyn-bridge"
+    ],
+    "wiki": {
+      "uk": "Вашингтон_Роблінг",
+      "en": "Washington_Roebling"
+    }
+  },
+  {
+    "id": "Q49902",
+    "type": "person",
+    "label_uk": "Емілі Воррен Роблінг",
+    "label_en": "Emily Warren Roebling",
+    "years": {
+      "start": 1843,
+      "end": 1903
+    },
+    "country": "US",
+    "kind": "engineering",
+    "core": true,
+    "articles": [
+      "2026-11-04-brooklyn-bridge"
+    ],
+    "wiki": {
+      "uk": "Емілі_Воррен_Роблінг",
+      "en": "Emily_Warren_Roebling"
+    }
+  },
+  {
+    "id": "Q102272",
+    "type": "person",
+    "label_uk": "Ян ван Ейк",
+    "label_en": "Jan van Eyck",
+    "years": {
+      "start": 1390,
+      "end": 1441,
+      "approx": true
+    },
+    "country": "BE",
+    "kind": "painting",
+    "core": true,
+    "articles": [
+      "2026-11-06-ghent-altarpiece"
+    ],
+    "wiki": {
+      "uk": "Ян_ван_Ейк",
+      "en": "Jan_van_Eyck"
+    }
+  },
+  {
+    "id": "Q364350",
+    "type": "person",
+    "label_uk": "Хуберт ван Ейк",
+    "label_en": "Hubert van Eyck",
+    "years": {
+      "start": 1385,
+      "end": 1426,
+      "approx": true
+    },
+    "country": "BE",
+    "kind": "painting",
+    "core": true,
+    "articles": [
+      "2026-11-06-ghent-altarpiece"
+    ],
+    "wiki": {
+      "en": "Hubert_van_Eyck"
+    }
+  },
+  {
+    "id": "Q1841289",
+    "type": "person",
+    "label_uk": "Йос Вейд",
+    "label_en": "Joos Vijd",
+    "years": {
+      "start": 1380,
+      "end": 1439,
+      "approx": true
+    },
+    "country": "BE",
+    "kind": "patronage",
+    "core": false,
+    "articles": [
+      "2026-11-06-ghent-altarpiece"
+    ]
+  },
+  {
+    "id": "Q191798",
+    "type": "person",
+    "label_uk": "Жорж-Ежен Осман",
+    "label_en": "Georges-Eugène Haussmann",
+    "years": {
+      "start": 1809,
+      "end": 1891
+    },
+    "country": "FR",
+    "kind": "urbanism",
+    "core": true,
+    "articles": [
+      "2026-11-09-haussmanns-paris"
+    ],
+    "wiki": {
+      "uk": "Жорж_Ежен_Осман",
+      "en": "Georges-Eugène_Haussmann"
+    }
+  },
+  {
+    "id": "Q7721",
+    "type": "person",
+    "label_uk": "Наполеон III",
+    "label_en": "Napoleon III",
+    "years": {
+      "start": 1808,
+      "end": 1873
+    },
+    "country": "FR",
+    "kind": "patronage",
+    "core": false,
+    "articles": [
+      "2026-11-09-haussmanns-paris"
+    ],
+    "wiki": {
+      "uk": "Наполеон_III_Бонапарт",
+      "en": "Napoleon_III"
+    }
+  },
+  {
+    "id": "Q528604",
+    "type": "person",
+    "label_uk": "Ежен Бельґран",
+    "label_en": "Eugène Belgrand",
+    "years": {
+      "start": 1810,
+      "end": 1878
+    },
+    "country": "FR",
+    "kind": "engineering",
+    "core": false,
+    "articles": [
+      "2026-11-09-haussmanns-paris"
+    ],
+    "wiki": {
+      "en": "Eugène_Belgrand"
+    }
+  },
+  {
+    "id": "Q390367",
+    "type": "person",
+    "label_uk": "Адольф Альфан",
+    "label_en": "Adolphe Alphand",
+    "years": {
+      "start": 1817,
+      "end": 1891
+    },
+    "country": "FR",
+    "kind": "urbanism",
+    "core": false,
+    "articles": [
+      "2026-11-09-haussmanns-paris"
+    ],
+    "wiki": {
+      "uk": "Адольф_Альфан",
+      "en": "Adolphe_Alphand"
+    }
+  },
+  {
+    "id": "Q979605",
+    "type": "person",
+    "label_uk": "Габріель Давіу",
+    "label_en": "Gabriel Davioud",
+    "years": {
+      "start": 1824,
+      "end": 1881
+    },
+    "country": "FR",
+    "kind": "architecture",
+    "core": false,
+    "articles": [
+      "2026-11-09-haussmanns-paris"
+    ],
+    "wiki": {
+      "en": "Gabriel_Davioud"
+    }
+  },
+  {
+    "id": "Q61332",
+    "type": "person",
+    "label_uk": "Петер Парлерж",
+    "label_en": "Peter Parler",
+    "years": {
+      "start": 1330,
+      "end": 1399,
+      "approx": true
+    },
+    "country": "CZ",
+    "kind": "architecture",
+    "core": false,
+    "articles": [
+      "2026-11-11-kutna-hora"
+    ],
+    "wiki": {
+      "uk": "Петер_Парлерж",
+      "en": "Peter_Parler"
+    }
+  },
+  {
+    "id": "Q77707",
+    "type": "person",
+    "label_uk": "Ян Парлерж",
+    "label_en": "Johann Parler",
+    "years": {
+      "start": 1360,
+      "end": 1405,
+      "approx": true
+    },
+    "country": "CZ",
+    "kind": "architecture",
+    "core": false,
+    "articles": [
+      "2026-11-11-kutna-hora"
+    ],
+    "wiki": {
+      "en": "Johann_Parler"
+    }
+  },
+  {
+    "id": "Q3845344",
+    "type": "person",
+    "label_uk": "Матєй Рейсек",
+    "label_en": "Matěj Rejsek",
+    "years": {
+      "start": 1445,
+      "end": 1506,
+      "approx": true
+    },
+    "country": "CZ",
+    "kind": "architecture",
+    "core": false,
+    "articles": [
+      "2026-11-11-kutna-hora"
+    ],
+    "wiki": {
+      "en": "Matěj_Rejsek"
+    }
+  },
+  {
+    "id": "Q66724",
+    "type": "person",
+    "label_uk": "Бенедикт Рейт",
+    "label_en": "Benedikt Rejt",
+    "years": {
+      "start": 1454,
+      "end": 1536,
+      "approx": true
+    },
+    "country": "CZ",
+    "kind": "architecture",
+    "core": false,
+    "articles": [
+      "2026-11-11-kutna-hora"
+    ],
+    "wiki": {
+      "en": "Benedikt_Rejt"
+    }
+  },
+  {
+    "id": "Q731384",
+    "type": "person",
+    "label_uk": "Йозеф Мокер",
+    "label_en": "Josef Mocker",
+    "years": {
+      "start": 1835,
+      "end": 1899
+    },
+    "country": "CZ",
+    "kind": "architecture",
+    "core": false,
+    "articles": [
+      "2026-11-11-kutna-hora"
+    ],
+    "wiki": {
+      "en": "Josef_Mocker"
+    }
+  },
+  {
+    "id": "Q472688",
+    "type": "person",
+    "label_uk": "Ян Блажей Сантіні-Айхл",
+    "label_en": "Jan Santini Aichel",
+    "years": {
+      "start": 1677,
+      "end": 1723
+    },
+    "country": "CZ",
+    "kind": "architecture",
+    "core": false,
+    "articles": [
+      "2026-11-11-kutna-hora"
+    ],
+    "wiki": {
+      "uk": "Ян_Блажей_Сантіні-Айхел",
+      "en": "Jan_Santini_Aichel"
+    }
+  },
+  {
+    "id": "Q1445665",
+    "type": "person",
+    "label_uk": "Франтішек Рінт",
+    "label_en": "František Rint",
+    "years": {
+      "start": 1835
+    },
+    "country": "CZ",
+    "kind": "sculpture",
+    "core": false,
+    "articles": [
+      "2026-11-11-kutna-hora"
+    ],
+    "wiki": {
+      "en": "František_Rint"
+    }
+  },
+  {
+    "id": "Q16008462",
+    "type": "person",
+    "label_uk": "Джордж Стаут",
+    "label_en": "George Stout",
+    "years": {
+      "start": 1897,
+      "end": 1978
+    },
+    "country": "US",
+    "kind": "history",
+    "core": false,
+    "articles": [
+      "2026-11-13-monuments-men"
+    ],
+    "wiki": {
+      "en": "George_L._Stout"
+    }
+  },
+  {
+    "id": "Q351339",
+    "type": "person",
+    "label_uk": "Лінкольн Кірстайн",
+    "label_en": "Lincoln Kirstein",
+    "years": {
+      "start": 1907,
+      "end": 1996
+    },
+    "country": "US",
+    "kind": "history",
+    "core": false,
+    "articles": [
+      "2026-11-13-monuments-men"
+    ],
+    "wiki": {
+      "en": "Lincoln_Kirstein"
+    }
+  },
+  {
+    "id": "Q41264",
+    "type": "person",
+    "label_uk": "Ян Вермеєр",
+    "label_en": "Johannes Vermeer",
+    "years": {
+      "start": 1632,
+      "end": 1675
+    },
+    "country": "NL",
+    "kind": "painting",
+    "core": false,
+    "articles": [
+      "2026-11-13-monuments-men"
+    ],
+    "wiki": {
+      "uk": "Ян_Вермер",
+      "en": "Johannes_Vermeer"
+    }
+  },
+  {
+    "id": "Q1700096",
+    "type": "person",
+    "label_uk": "Джон Фаулер",
+    "label_en": "John Fowler",
+    "years": {
+      "start": 1817,
+      "end": 1898
+    },
+    "country": "GB",
+    "kind": "engineering",
+    "core": true,
+    "articles": [
+      "2026-11-15-forth-bridge"
+    ],
+    "wiki": {
+      "uk": "Джон_Фавлер",
+      "en": "Sir_John_Fowler,_1st_Baronet"
+    }
+  },
+  {
+    "id": "Q817394",
+    "type": "person",
+    "label_uk": "Бенджамін Бейкер",
+    "label_en": "Benjamin Baker",
+    "years": {
+      "start": 1840,
+      "end": 1907
+    },
+    "country": "GB",
+    "kind": "engineering",
+    "core": true,
+    "articles": [
+      "2026-11-15-forth-bridge"
+    ],
+    "wiki": {
+      "uk": "Бенджамін_Бейкер_(інженер)",
+      "en": "Benjamin_Baker_(engineer)"
+    }
+  },
+  {
+    "id": "Q337783",
+    "type": "person",
+    "label_uk": "Вільям Аррол",
+    "label_en": "William Arrol",
+    "years": {
+      "start": 1839,
+      "end": 1913
+    },
+    "country": "GB",
+    "kind": "engineering",
+    "core": false,
+    "articles": [
+      "2026-11-15-forth-bridge"
+    ],
+    "wiki": {
+      "en": "William_Arrol"
+    }
+  },
+  {
+    "id": "Q368762",
+    "type": "person",
+    "label_uk": "Томас Бауч",
+    "label_en": "Thomas Bouch",
+    "years": {
+      "start": 1822,
+      "end": 1880
+    },
+    "country": "GB",
+    "kind": "engineering",
+    "core": false,
+    "articles": [
+      "2026-11-15-forth-bridge"
+    ],
+    "wiki": {
+      "en": "Thomas_Bouch"
+    }
+  },
+  {
+    "id": "Q48319",
+    "type": "person",
+    "label_uk": "Ганс Гольбейн Молодший",
+    "label_en": "Hans Holbein the Younger",
+    "years": {
+      "start": 1497,
+      "end": 1543
+    },
+    "country": "DE",
+    "kind": "painting",
+    "core": true,
+    "articles": [
+      "2026-11-16-holbeins-ambassadors"
+    ],
+    "wiki": {
+      "uk": "Ганс_Гольбейн_Молодший",
+      "en": "Hans_Holbein_the_Younger"
+    }
+  },
+  {
+    "id": "Q3175386",
+    "type": "person",
+    "label_uk": "Жан де Дентвіль",
+    "label_en": "Jean de Dinteville",
+    "years": {
+      "start": 1504,
+      "end": 1555
+    },
+    "country": "FR",
+    "core": false,
+    "articles": [
+      "2026-11-16-holbeins-ambassadors"
+    ],
+    "wiki": {
+      "uk": "Жан_де_Дентевіль",
+      "en": "Jean_de_Dinteville"
+    }
+  },
+  {
+    "id": "Q3103711",
+    "type": "person",
+    "label_uk": "Жорж де Сельв",
+    "label_en": "Georges de Selve",
+    "years": {
+      "start": 1508,
+      "end": 1541
+    },
+    "country": "FR",
+    "core": false,
+    "articles": [
+      "2026-11-16-holbeins-ambassadors"
+    ],
+    "wiki": {
+      "en": "Georges_de_Selve"
+    }
+  },
+  {
+    "id": "Q38370",
+    "type": "person",
+    "label_uk": "Генріх VIII",
+    "label_en": "Henry VIII of England",
+    "years": {
+      "start": 1491,
+      "end": 1547
+    },
+    "country": "GB",
+    "kind": "patronage",
+    "core": false,
+    "articles": [
+      "2026-11-16-holbeins-ambassadors"
+    ],
+    "wiki": {
+      "uk": "Генріх_VIII",
+      "en": "Henry_VIII"
+    }
+  },
+  {
+    "id": "Q1192577",
+    "type": "work",
+    "label_uk": "Сант'Аньєзе-ін-Агоне",
+    "label_en": "Sant'Agnese in Agone",
+    "years": {
+      "start": 1652,
+      "end": 1672,
+      "approx": true
+    },
+    "country": "IT",
+    "kind": "architecture",
+    "coords": [
+      41.8988,
+      12.4726
+    ],
+    "core": true,
+    "articles": [
+      "2026-10-01-sant-agnese-in-agone"
+    ],
+    "wiki": {
+      "uk": "Сант-Аньєзе-ін-Аґоне",
+      "en": "Sant'Agnese_in_Agone"
+    }
+  },
+  {
+    "id": "x:leo-and-attila-algardi",
+    "type": "work",
+    "label_uk": "Зустріч Лева I з Аттілою (Альґарді)",
+    "label_en": "The Meeting of Pope Leo I and Attila (Algardi)",
+    "years": {
+      "start": 1646,
+      "end": 1653
+    },
+    "country": "VA",
+    "kind": "sculpture",
+    "coords": [
+      41.9022,
+      12.4534
+    ],
+    "core": true,
+    "articles": [
+      "2026-10-01-sant-agnese-in-agone"
+    ]
+  },
+  {
+    "id": "Q655470",
+    "type": "work",
+    "label_uk": "Фонтан чотирьох річок",
+    "label_en": "Fountain of the Four Rivers",
+    "years": {
+      "start": 1648,
+      "end": 1651
+    },
+    "country": "IT",
+    "kind": "sculpture",
+    "coords": [
+      41.899,
+      12.4731
+    ],
+    "core": true,
+    "articles": [
+      "2026-10-01-sant-agnese-in-agone",
+      "2026-10-26-bernini-and-borromini"
+    ],
+    "wiki": {
+      "uk": "Фонтан_чотирьох_річок",
+      "en": "Fontana_dei_Quattro_Fiumi"
+    }
+  },
+  {
+    "id": "Q1808677",
+    "type": "work",
+    "label_uk": "Надгробок Олександра VII",
+    "label_en": "Tomb of Pope Alexander VII",
+    "years": {
+      "start": 1671,
+      "end": 1678
+    },
+    "country": "VA",
+    "kind": "sculpture",
+    "coords": [
+      41.9022,
+      12.4533
+    ],
+    "core": true,
+    "articles": [
+      "2026-10-16-alexander-vii"
+    ],
+    "wiki": {
+      "en": "Tomb_of_Pope_Alexander_VII"
+    }
+  },
+  {
+    "id": "Q826635",
+    "type": "work",
+    "label_uk": "Слон з обеліском",
+    "label_en": "Elephant and Obelisk",
+    "years": {
+      "start": 1665,
+      "end": 1667
+    },
+    "country": "IT",
+    "kind": "sculpture",
+    "coords": [
+      41.898,
+      12.4775
+    ],
+    "core": true,
+    "articles": [
+      "2026-10-16-alexander-vii"
+    ],
+    "wiki": {
+      "en": "Elephant_and_Obelisk"
+    }
+  },
+  {
+    "id": "Q733893",
+    "type": "work",
+    "label_uk": "Кафедра Святого Петра",
+    "label_en": "Chair of Saint Peter",
+    "years": {
+      "start": 1657,
+      "end": 1666
+    },
+    "country": "VA",
+    "kind": "sculpture",
+    "coords": [
+      41.9022,
+      12.4533
+    ],
+    "core": false,
+    "articles": [
+      "2026-10-16-alexander-vii",
+      "2026-10-21-st-peters-basilica"
+    ],
+    "wiki": {
+      "en": "Chair_of_Saint_Peter"
+    }
+  },
+  {
+    "id": "Q1073397",
+    "type": "work",
+    "label_uk": "Скала Реджа",
+    "label_en": "Scala Regia",
+    "years": {
+      "start": 1663,
+      "end": 1666
+    },
+    "country": "VA",
+    "kind": "architecture",
+    "coords": [
+      41.9028,
+      12.455
+    ],
+    "core": false,
+    "articles": [
+      "2026-10-16-alexander-vii"
+    ],
+    "wiki": {
+      "en": "Scala_Regia_(Vatican)"
+    }
+  },
+  {
+    "id": "Q83425",
+    "type": "work",
+    "label_uk": "Площа Святого Петра",
+    "label_en": "St Peter's Square",
+    "years": {
+      "start": 1656,
+      "end": 1667
+    },
+    "country": "VA",
+    "kind": "architecture",
+    "coords": [
+      41.9022,
+      12.4572
+    ],
+    "core": true,
+    "articles": [
+      "2026-10-19-st-peters-square"
+    ],
+    "wiki": {
+      "uk": "Майдан_святого_Петра",
+      "en": "St._Peter's_Square"
+    }
+  },
+  {
+    "id": "Q1444766",
+    "type": "work",
+    "label_uk": "Ватиканський обеліск",
+    "label_en": "Vatican Obelisk",
+    "country": "VA",
+    "kind": "architecture",
+    "coords": [
+      41.9022,
+      12.4563
+    ],
+    "core": true,
+    "articles": [
+      "2026-10-19-st-peters-square"
+    ],
+    "wiki": {
+      "uk": "Ватиканський_обеліск",
+      "en": "Vatican_obelisk"
+    }
+  },
+  {
+    "id": "Q1140395",
+    "type": "work",
+    "label_uk": "Віа делла Кончиліаціоне",
+    "label_en": "Via della Conciliazione",
+    "years": {
+      "start": 1936,
+      "end": 1950
+    },
+    "country": "IT",
+    "kind": "urbanism",
+    "coords": [
+      41.9023,
+      12.462
+    ],
+    "core": false,
+    "articles": [
+      "2026-10-19-st-peters-square"
+    ],
+    "wiki": {
+      "en": "Via_della_Conciliazione"
+    }
+  },
+  {
+    "id": "Q12512",
+    "type": "work",
+    "label_uk": "Собор Святого Петра",
+    "label_en": "St Peter's Basilica",
+    "years": {
+      "start": 1506,
+      "end": 1626
+    },
+    "country": "VA",
+    "kind": "architecture",
+    "coords": [
+      41.9022,
+      12.4534
+    ],
+    "core": true,
+    "articles": [
+      "2026-10-01-sant-agnese-in-agone",
+      "2026-10-16-alexander-vii",
+      "2026-10-21-st-peters-basilica"
+    ],
+    "wiki": {
+      "uk": "Собор_Святого_Петра",
+      "en": "St._Peter's_Basilica"
+    }
+  },
+  {
+    "id": "Q2439030",
+    "type": "work",
+    "label_uk": "Балдахін Святого Петра",
+    "label_en": "St Peter's Baldachin",
+    "years": {
+      "start": 1623,
+      "end": 1634
+    },
+    "country": "VA",
+    "kind": "sculpture",
+    "coords": [
+      41.9022,
+      12.4533
+    ],
+    "core": true,
+    "articles": [
+      "2026-10-21-st-peters-basilica"
+    ],
+    "wiki": {
+      "uk": "Балдахін_Святого_Петра",
+      "en": "St._Peter's_Baldachin"
+    }
+  },
+  {
+    "id": "Q3955657",
+    "type": "work",
+    "label_uk": "Надгробок Урбана VIII",
+    "label_en": "Tomb of Pope Urban VIII",
+    "years": {
+      "start": 1628,
+      "end": 1647
+    },
+    "country": "VA",
+    "kind": "sculpture",
+    "coords": [
+      41.9022,
+      12.4534
+    ],
+    "core": false,
+    "articles": [
+      "2026-10-21-st-peters-basilica"
+    ]
+  },
+  {
+    "id": "Q235242",
+    "type": "work",
+    "label_uk": "П'єта",
+    "label_en": "Pietà",
+    "years": {
+      "start": 1498,
+      "end": 1499
+    },
+    "country": "VA",
+    "kind": "sculpture",
+    "coords": [
+      41.9022,
+      12.4533
+    ],
+    "core": false,
+    "articles": [
+      "2026-10-21-st-peters-basilica"
+    ],
+    "wiki": {
+      "uk": "П'єта_(Мікеланджело)",
+      "en": "Pietà_(Michelangelo)"
+    }
+  },
+  {
+    "id": "Q186282",
+    "type": "work",
+    "label_uk": "Санта-Марія-Маджоре",
+    "label_en": "Santa Maria Maggiore",
+    "years": {
+      "start": 432,
+      "approx": true
+    },
+    "country": "IT",
+    "kind": "architecture",
+    "coords": [
+      41.8975,
+      12.4986
+    ],
+    "core": true,
+    "articles": [
+      "2026-10-23-santa-maria-maggiore"
+    ],
+    "wiki": {
+      "uk": "Базиліка_Санта-Марія-Маджоре",
+      "en": "Santa_Maria_Maggiore"
+    }
+  },
+  {
+    "id": "Q117667146",
+    "type": "work",
+    "label_uk": "Salus Populi Romani",
+    "label_en": "Salus Populi Romani",
+    "country": "IT",
+    "kind": "painting",
+    "coords": [
+      41.8975,
+      12.4986
+    ],
+    "core": false,
+    "articles": [
+      "2026-10-23-santa-maria-maggiore"
+    ]
+  },
+  {
+    "id": "Q867329",
+    "type": "work",
+    "label_uk": "Сан-Карло-алле-Кваттро-Фонтане",
+    "label_en": "San Carlo alle Quattro Fontane",
+    "years": {
+      "start": 1638,
+      "end": 1677
+    },
+    "country": "IT",
+    "kind": "architecture",
+    "coords": [
+      41.9018,
+      12.4907
+    ],
+    "core": true,
+    "articles": [
+      "2026-10-26-bernini-and-borromini"
+    ],
+    "wiki": {
+      "uk": "Сан-Карло-алле-Кваттро-Фонтане",
+      "en": "San_Carlo_alle_Quattro_Fontane"
+    }
+  },
+  {
+    "id": "Q1354667",
+    "type": "work",
+    "label_uk": "Сант'Андреа-аль-Квіринале",
+    "label_en": "Sant'Andrea al Quirinale",
+    "years": {
+      "start": 1658,
+      "end": 1670
+    },
+    "country": "IT",
+    "kind": "architecture",
+    "coords": [
+      41.9007,
+      12.4893
+    ],
+    "core": true,
+    "articles": [
+      "2026-10-26-bernini-and-borromini"
+    ],
+    "wiki": {
+      "uk": "Сант-Андреа-аль-Квірінале",
+      "en": "Sant'Andrea_al_Quirinale"
+    }
+  },
+  {
+    "id": "Q1324617",
+    "type": "work",
+    "label_uk": "Сант'Іво-алла-Сапієнца",
+    "label_en": "Sant'Ivo alla Sapienza",
+    "years": {
+      "start": 1642,
+      "end": 1660
+    },
+    "country": "IT",
+    "kind": "architecture",
+    "coords": [
+      41.8982,
+      12.4747
+    ],
+    "core": true,
+    "articles": [
+      "2026-10-26-bernini-and-borromini"
+    ],
+    "wiki": {
+      "uk": "Сант-Іво-алла-Сапієнца",
+      "en": "Sant'Ivo_alla_Sapienza"
+    }
+  },
+  {
+    "id": "Q7848306",
+    "type": "work",
+    "label_uk": "Істина, яку відкриває Час",
+    "label_en": "Truth Unveiled by Time",
+    "years": {
+      "start": 1645,
+      "end": 1652,
+      "approx": true
+    },
+    "country": "IT",
+    "kind": "sculpture",
+    "coords": [
+      41.914,
+      12.492
+    ],
+    "core": false,
+    "articles": [
+      "2026-10-26-bernini-and-borromini"
+    ],
+    "wiki": {
+      "en": "Truth_Unveiled_by_Time_(Bernini)"
+    }
+  },
+  {
+    "id": "Q3697674",
+    "type": "work",
+    "label_uk": "Христос під покровом",
+    "label_en": "Veiled Christ",
+    "years": {
+      "start": 1753
+    },
+    "country": "IT",
+    "kind": "sculpture",
+    "coords": [
+      40.8492,
+      14.2549
+    ],
+    "core": true,
+    "articles": [
+      "2026-10-28-veiled-christ"
+    ],
+    "wiki": {
+      "en": "Veiled_Christ"
+    }
+  },
+  {
+    "id": "Q897839",
+    "type": "work",
+    "label_uk": "Капела Сансеверо",
+    "label_en": "Cappella Sansevero",
+    "country": "IT",
+    "kind": "architecture",
+    "coords": [
+      40.8492,
+      14.2549
+    ],
+    "core": true,
+    "articles": [
+      "2026-10-28-veiled-christ",
+      "2026-11-08-raimondo-di-sangro"
+    ],
+    "wiki": {
+      "en": "Cappella_Sansevero"
+    }
+  },
+  {
+    "id": "Q30908922",
+    "type": "work",
+    "label_uk": "Скромність (Коррадіні)",
+    "label_en": "Modesty (Corradini)",
+    "years": {
+      "start": 1752
+    },
+    "country": "IT",
+    "kind": "sculpture",
+    "coords": [
+      40.8492,
+      14.2549
+    ],
+    "core": false,
+    "articles": [
+      "2026-10-28-veiled-christ",
+      "2026-11-08-raimondo-di-sangro"
+    ],
+    "wiki": {
+      "en": "Modesty_(Corradini_sculpture)"
+    }
+  },
+  {
+    "id": "Q121863942",
+    "type": "work",
+    "label_uk": "Розчарування (Квейроло)",
+    "label_en": "Disillusion (Queirolo)",
+    "years": {
+      "start": 1753,
+      "end": 1754,
+      "approx": true
+    },
+    "country": "IT",
+    "kind": "sculpture",
+    "coords": [
+      40.8492,
+      14.2549
+    ],
+    "core": false,
+    "articles": [
+      "2026-10-28-veiled-christ",
+      "2026-11-08-raimondo-di-sangro"
+    ]
+  },
+  {
+    "id": "Q2981",
+    "type": "work",
+    "label_uk": "Собор Паризької Богоматері",
+    "label_en": "Notre-Dame de Paris",
+    "years": {
+      "start": 1163,
+      "end": 1345
+    },
+    "country": "FR",
+    "kind": "architecture",
+    "coords": [
+      48.853,
+      2.3498
+    ],
+    "core": true,
+    "articles": [
+      "2026-10-30-notre-dame-de-paris"
+    ],
+    "wiki": {
+      "uk": "Собор_Паризької_Богоматері",
+      "en": "Notre-Dame_de_Paris"
+    }
+  },
+  {
+    "id": "Q191380",
+    "type": "work",
+    "label_uk": "Собор Паризької Богоматері (роман)",
+    "label_en": "The Hunchback of Notre-Dame",
+    "years": {
+      "start": 1831
+    },
+    "country": "FR",
+    "kind": "literature",
+    "core": false,
+    "articles": [
+      "2026-10-30-notre-dame-de-paris"
+    ],
+    "wiki": {
+      "uk": "Собор_Паризької_Богоматері_(роман)",
+      "en": "The_Hunchback_of_Notre-Dame"
+    }
+  },
+  {
+    "id": "Q208758",
+    "type": "work",
+    "label_uk": "Меніни",
+    "label_en": "Las Meninas",
+    "years": {
+      "start": 1656
+    },
+    "country": "ES",
+    "kind": "painting",
+    "coords": [
+      40.4139,
+      -3.6922
+    ],
+    "core": true,
+    "articles": [
+      "2026-11-01-las-meninas"
+    ],
+    "wiki": {
+      "uk": "Фрейліни_(картина)",
+      "en": "Las_Meninas"
+    }
+  },
+  {
+    "id": "Q283822",
+    "type": "work",
+    "label_uk": "Меніни (серія Пікассо)",
+    "label_en": "Las Meninas (Picasso series)",
+    "years": {
+      "start": 1957
+    },
+    "country": "ES",
+    "kind": "painting",
+    "coords": [
+      41.3852,
+      2.1809
+    ],
+    "core": false,
+    "articles": [
+      "2026-11-01-las-meninas"
+    ],
+    "wiki": {
+      "en": "Las_Meninas_(Picasso)"
+    }
+  },
+  {
+    "id": "Q179900",
+    "type": "work",
+    "label_uk": "Давид (Мікеланджело)",
+    "label_en": "David (Michelangelo)",
+    "years": {
+      "start": 1501,
+      "end": 1504
+    },
+    "country": "IT",
+    "kind": "sculpture",
+    "coords": [
+      43.7767,
+      11.2594
+    ],
+    "core": true,
+    "articles": [
+      "2026-11-02-david"
+    ],
+    "wiki": {
+      "uk": "Давид_(Мікеланджело)",
+      "en": "David_(Michelangelo)"
+    }
+  },
+  {
+    "id": "Q2045726",
+    "type": "work",
+    "label_uk": "Битва при Ангіарі",
+    "label_en": "The Battle of Anghiari",
+    "years": {
+      "start": 1503,
+      "end": 1505
+    },
+    "country": "IT",
+    "kind": "painting",
+    "coords": [
+      43.7694,
+      11.2561
+    ],
+    "core": false,
+    "articles": [
+      "2026-11-02-david"
+    ],
+    "wiki": {
+      "en": "The_Battle_of_Anghiari_(Leonardo)"
+    }
+  },
+  {
+    "id": "Q2236899",
+    "type": "work",
+    "label_uk": "Битва при Кашині",
+    "label_en": "The Battle of Cascina",
+    "years": {
+      "start": 1504,
+      "end": 1506,
+      "approx": true
+    },
+    "country": "IT",
+    "kind": "painting",
+    "coords": [
+      43.7694,
+      11.2561
+    ],
+    "core": false,
+    "articles": [
+      "2026-11-02-david"
+    ],
+    "wiki": {
+      "uk": "Битва_при_Кашині_(Мікеланджело)",
+      "en": "Battle_of_Cascina_(Michelangelo)"
+    }
+  },
+  {
+    "id": "Q567833",
+    "type": "work",
+    "label_uk": "Мадонна Брюгге",
+    "label_en": "Madonna of Bruges",
+    "years": {
+      "start": 1501,
+      "end": 1504
+    },
+    "country": "BE",
+    "kind": "sculpture",
+    "coords": [
+      51.2047,
+      3.2244
+    ],
+    "core": false,
+    "articles": [
+      "2026-11-13-monuments-men"
+    ],
+    "wiki": {
+      "uk": "Мадонна_Брюгге",
+      "en": "Madonna_of_Bruges"
+    }
+  },
+  {
+    "id": "Q125006",
+    "type": "work",
+    "label_uk": "Бруклінський міст",
+    "label_en": "Brooklyn Bridge",
+    "years": {
+      "start": 1869,
+      "end": 1883
+    },
+    "country": "US",
+    "kind": "engineering",
+    "coords": [
+      40.7057,
+      -73.9963
+    ],
+    "core": true,
+    "articles": [
+      "2026-11-04-brooklyn-bridge"
+    ],
+    "wiki": {
+      "uk": "Бруклінський_міст",
+      "en": "Brooklyn_Bridge"
+    }
+  },
+  {
+    "id": "Q3397656",
+    "type": "work",
+    "label_uk": "Висячий міст через Ніагару",
+    "label_en": "Niagara Falls Suspension Bridge",
+    "years": {
+      "start": 1855
+    },
+    "country": "US",
+    "kind": "engineering",
+    "coords": [
+      43.1092,
+      -79.0583
+    ],
+    "core": false,
+    "articles": [
+      "2026-11-04-brooklyn-bridge"
+    ],
+    "wiki": {
+      "en": "Niagara_Falls_Suspension_Bridge"
+    }
+  },
+  {
+    "id": "Q734834",
+    "type": "work",
+    "label_uk": "Гентський вівтар",
+    "label_en": "Ghent Altarpiece",
+    "years": {
+      "start": 1420,
+      "end": 1432,
+      "approx": true
+    },
+    "country": "BE",
+    "kind": "painting",
+    "coords": [
+      51.0532,
+      3.7265
+    ],
+    "core": true,
+    "articles": [
+      "2026-11-06-ghent-altarpiece",
+      "2026-11-13-monuments-men"
+    ],
+    "wiki": {
+      "uk": "Гентський_вівтар",
+      "en": "Ghent_Altarpiece"
+    }
+  },
+  {
+    "id": "Q913185",
+    "type": "work",
+    "label_uk": "Храм Святої Варвари",
+    "label_en": "St Barbara's Church, Kutná Hora",
+    "years": {
+      "start": 1388,
+      "end": 1905
+    },
+    "country": "CZ",
+    "kind": "architecture",
+    "coords": [
+      49.9449,
+      15.2636
+    ],
+    "core": true,
+    "articles": [
+      "2026-11-11-kutna-hora"
+    ],
+    "wiki": {
+      "uk": "Церква_Святої_Варвари_(Кутна_Гора)",
+      "en": "St._Barbara's_Church,_Kutná_Hora"
+    }
+  },
+  {
+    "id": "Q513821",
+    "type": "work",
+    "label_uk": "Костниця в Седлеці",
+    "label_en": "Sedlec Ossuary",
+    "country": "CZ",
+    "kind": "architecture",
+    "coords": [
+      49.962,
+      15.2883
+    ],
+    "core": true,
+    "articles": [
+      "2026-11-11-kutna-hora"
+    ],
+    "wiki": {
+      "uk": "Седлецька_кістниця",
+      "en": "Sedlec_Ossuary"
+    }
+  },
+  {
+    "id": "Q5949",
+    "type": "work",
+    "label_uk": "Собор Святого Віта",
+    "label_en": "St Vitus Cathedral",
+    "years": {
+      "start": 1344,
+      "end": 1929
+    },
+    "country": "CZ",
+    "kind": "architecture",
+    "coords": [
+      50.0908,
+      14.4006
+    ],
+    "core": false,
+    "articles": [
+      "2026-11-11-kutna-hora"
+    ],
+    "wiki": {
+      "uk": "Собор_Святого_Віта_(Прага)",
+      "en": "St._Vitus_Cathedral"
+    }
+  },
+  {
+    "id": "Q1067285",
+    "type": "work",
+    "label_uk": "Владиславський зал",
+    "label_en": "Vladislav Hall",
+    "years": {
+      "start": 1493,
+      "end": 1502
+    },
+    "country": "CZ",
+    "kind": "architecture",
+    "coords": [
+      50.0907,
+      14.402
+    ],
+    "core": false,
+    "articles": [
+      "2026-11-11-kutna-hora"
+    ],
+    "wiki": {
+      "en": "Vladislav_Hall"
+    }
+  },
+  {
+    "id": "Q588695",
+    "type": "work",
+    "label_uk": "Мистецтво живопису",
+    "label_en": "The Art of Painting",
+    "years": {
+      "start": 1666,
+      "end": 1668,
+      "approx": true
+    },
+    "country": "AT",
+    "kind": "painting",
+    "coords": [
+      48.2039,
+      16.3616
+    ],
+    "core": false,
+    "articles": [
+      "2026-11-13-monuments-men"
+    ],
+    "wiki": {
+      "uk": "Алегорія_живопису_(Вермер)",
+      "en": "The_Art_of_Painting"
+    }
+  },
+  {
+    "id": "Q275",
+    "type": "work",
+    "label_uk": "Форт-Брідж",
+    "label_en": "Forth Bridge",
+    "years": {
+      "start": 1882,
+      "end": 1890
+    },
+    "country": "GB",
+    "kind": "engineering",
+    "coords": [
+      55.9984,
+      -3.3876
+    ],
+    "core": true,
+    "articles": [
+      "2026-11-15-forth-bridge"
+    ],
+    "wiki": {
+      "uk": "Форт-Брідж",
+      "en": "Forth_Bridge"
+    }
+  },
+  {
+    "id": "Q6480690",
+    "type": "work",
+    "label_uk": "Тейський міст",
+    "label_en": "Tay Bridge",
+    "years": {
+      "start": 1871,
+      "end": 1878
+    },
+    "country": "GB",
+    "kind": "engineering",
+    "coords": [
+      56.4389,
+      -2.9886
+    ],
+    "core": false,
+    "articles": [
+      "2026-11-15-forth-bridge"
+    ],
+    "wiki": {
+      "uk": "Тейський_міст",
+      "en": "Tay_Bridge"
+    }
+  },
+  {
+    "id": "Q1212937",
+    "type": "work",
+    "label_uk": "Посли",
+    "label_en": "The Ambassadors",
+    "years": {
+      "start": 1533
+    },
+    "country": "GB",
+    "kind": "painting",
+    "coords": [
+      51.5089,
+      -0.1283
+    ],
+    "core": true,
+    "articles": [
+      "2026-11-16-holbeins-ambassadors"
+    ],
+    "wiki": {
+      "uk": "Посланці",
+      "en": "The_Ambassadors_(Holbein)"
+    }
+  },
+  {
+    "id": "Q532113",
+    "type": "work",
+    "label_uk": "Парк Бют-Шомон",
+    "label_en": "Parc des Buttes-Chaumont",
+    "years": {
+      "start": 1864,
+      "end": 1867
+    },
+    "country": "FR",
+    "kind": "urbanism",
+    "coords": [
+      48.8803,
+      2.3828
+    ],
+    "core": false,
+    "articles": [
+      "2026-11-09-haussmanns-paris"
+    ],
+    "wiki": {
+      "uk": "Парк_Бютт-Шомон",
+      "en": "Parc_des_Buttes_Chaumont"
+    }
+  },
+  {
+    "id": "Q692839",
+    "type": "work",
+    "label_uk": "Фонтан Сен-Мішель",
+    "label_en": "Fontaine Saint-Michel",
+    "years": {
+      "start": 1858,
+      "end": 1860
+    },
+    "country": "FR",
+    "kind": "sculpture",
+    "coords": [
+      48.8531,
+      2.3437
+    ],
+    "core": false,
+    "articles": [
+      "2026-11-09-haussmanns-paris"
+    ],
+    "wiki": {
+      "en": "Fontaine_Saint-Michel"
+    }
+  },
+  {
+    "id": "Q1760057",
+    "type": "work",
+    "label_uk": "Порта-дель-Пополо",
+    "label_en": "Porta del Popolo",
+    "country": "IT",
+    "kind": "architecture",
+    "coords": [
+      41.9115,
+      12.476
+    ],
+    "core": false,
+    "articles": [
+      "2026-10-16-alexander-vii"
+    ],
+    "wiki": {
+      "uk": "Порта-дель-Пополо",
+      "en": "Porta_del_Popolo"
+    }
+  },
+  {
+    "id": "Q1629700",
+    "type": "work",
+    "label_uk": "Сан-Джованні-деї-Фіорентіні",
+    "label_en": "San Giovanni dei Fiorentini",
+    "country": "IT",
+    "kind": "architecture",
+    "coords": [
+      41.8995,
+      12.4649
+    ],
+    "core": false,
+    "articles": [
+      "2026-10-26-bernini-and-borromini"
+    ],
+    "wiki": {
+      "uk": "Сан-Джованні-дей-Фіорентіні",
+      "en": "San_Giovanni_dei_Fiorentini"
+    }
+  },
+  {
+    "id": "Q220",
+    "type": "place",
+    "label_uk": "Рим",
+    "label_en": "Rome",
+    "country": "IT",
+    "coords": [
+      41.8931,
+      12.4828
+    ],
+    "core": false,
+    "articles": [
+      "2026-10-01-sant-agnese-in-agone",
+      "2026-10-16-alexander-vii",
+      "2026-10-19-st-peters-square",
+      "2026-10-23-santa-maria-maggiore",
+      "2026-10-26-bernini-and-borromini",
+      "2026-11-02-david"
+    ],
+    "wiki": {
+      "uk": "Рим",
+      "en": "Rome"
+    }
+  },
+  {
+    "id": "Q237",
+    "type": "place",
+    "label_uk": "Ватикан",
+    "label_en": "Vatican City",
+    "country": "VA",
+    "coords": [
+      41.904,
+      12.453
+    ],
+    "core": false,
+    "articles": [
+      "2026-10-16-alexander-vii",
+      "2026-10-19-st-peters-square",
+      "2026-10-21-st-peters-basilica"
+    ],
+    "wiki": {
+      "uk": "Ватикан",
+      "en": "Vatican_City"
+    }
+  },
+  {
+    "id": "Q463400",
+    "type": "place",
+    "label_uk": "П'яцца Навона",
+    "label_en": "Piazza Navona",
+    "country": "IT",
+    "coords": [
+      41.8987,
+      12.4732
+    ],
+    "core": false,
+    "articles": [
+      "2026-10-01-sant-agnese-in-agone"
+    ],
+    "wiki": {
+      "uk": "П'яцца_Навона",
+      "en": "Piazza_Navona"
+    }
+  },
+  {
+    "id": "Q2518575",
+    "type": "place",
+    "label_uk": "П'яцца делла Мінерва",
+    "label_en": "Piazza della Minerva",
+    "country": "IT",
+    "coords": [
+      41.8981,
+      12.4775
+    ],
+    "core": false,
+    "articles": [
+      "2026-10-16-alexander-vii"
+    ],
+    "wiki": {
+      "en": "Piazza_della_Minerva"
+    }
+  },
+  {
+    "id": "Q963671",
+    "type": "place",
+    "label_uk": "Стадіон Доміціана",
+    "label_en": "Stadium of Domitian",
+    "country": "IT",
+    "coords": [
+      41.8989,
+      12.4731
+    ],
+    "core": false,
+    "articles": [
+      "2026-10-01-sant-agnese-in-agone"
+    ],
+    "wiki": {
+      "en": "Stadium_of_Domitian"
+    }
+  },
+  {
+    "id": "Q841506",
+    "type": "place",
+    "label_uk": "Галерея Боргезе",
+    "label_en": "Galleria Borghese",
+    "country": "IT",
+    "coords": [
+      41.9142,
+      12.4921
+    ],
+    "core": false,
+    "articles": [
+      "2026-10-26-bernini-and-borromini"
+    ],
+    "wiki": {
+      "uk": "Галерея_Боргезе",
+      "en": "Galleria_Borghese"
+    }
+  },
+  {
+    "id": "Q2634",
+    "type": "place",
+    "label_uk": "Неаполь",
+    "label_en": "Naples",
+    "country": "IT",
+    "coords": [
+      40.8358,
+      14.2486
+    ],
+    "core": false,
+    "articles": [
+      "2026-10-26-bernini-and-borromini",
+      "2026-10-28-veiled-christ",
+      "2026-11-08-raimondo-di-sangro"
+    ],
+    "wiki": {
+      "uk": "Неаполь",
+      "en": "Naples"
+    }
+  },
+  {
+    "id": "Q2751",
+    "type": "place",
+    "label_uk": "Сієна",
+    "label_en": "Siena",
+    "country": "IT",
+    "coords": [
+      43.3183,
+      11.3314
+    ],
+    "core": false,
+    "articles": [
+      "2026-10-16-alexander-vii"
+    ],
+    "wiki": {
+      "uk": "Сієна",
+      "en": "Siena"
+    }
+  },
+  {
+    "id": "Q2044",
+    "type": "place",
+    "label_uk": "Флоренція",
+    "label_en": "Florence",
+    "country": "IT",
+    "coords": [
+      43.7714,
+      11.2542
+    ],
+    "core": false,
+    "articles": [
+      "2026-11-02-david"
+    ],
+    "wiki": {
+      "uk": "Флоренція",
+      "en": "Florence"
+    }
+  },
+  {
+    "id": "Q10855544",
+    "type": "place",
+    "label_uk": "Галерея Академії (Флоренція)",
+    "label_en": "Galleria dell'Accademia, Florence",
+    "country": "IT",
+    "coords": [
+      43.7769,
+      11.2589
+    ],
+    "core": false,
+    "articles": [
+      "2026-11-02-david"
+    ],
+    "wiki": {
+      "en": "Galleria_dell'Accademia"
+    }
+  },
+  {
+    "id": "Q271928",
+    "type": "place",
+    "label_uk": "Палаццо Веккьо",
+    "label_en": "Palazzo Vecchio",
+    "country": "IT",
+    "coords": [
+      43.7694,
+      11.2561
+    ],
+    "core": false,
+    "articles": [
+      "2026-11-02-david"
+    ],
+    "wiki": {
+      "uk": "Палаццо_Веккйо",
+      "en": "Palazzo_Vecchio"
+    }
+  },
+  {
+    "id": "Q52069",
+    "type": "place",
+    "label_uk": "Капрезе-Мікеланджело",
+    "label_en": "Caprese Michelangelo",
+    "country": "IT",
+    "coords": [
+      43.6408,
+      11.9858
+    ],
+    "core": false,
+    "articles": [
+      "2026-11-02-david"
+    ],
+    "wiki": {
+      "uk": "Капрезе-Мікеланджело",
+      "en": "Caprese_Michelangelo"
+    }
+  },
+  {
+    "id": "Q51964",
+    "type": "place",
+    "label_uk": "Торремаджоре",
+    "label_en": "Torremaggiore",
+    "country": "IT",
+    "coords": [
+      41.6833,
+      15.2833
+    ],
+    "core": false,
+    "articles": [
+      "2026-11-08-raimondo-di-sangro"
+    ],
+    "wiki": {
+      "uk": "Торремаджоре",
+      "en": "Torremaggiore"
+    }
+  },
+  {
+    "id": "Q69269",
+    "type": "place",
+    "label_uk": "Біссоне",
+    "label_en": "Bissone",
+    "country": "CH",
+    "coords": [
+      45.95,
+      8.9667
+    ],
+    "core": false,
+    "articles": [
+      "2026-10-26-bernini-and-borromini"
+    ],
+    "wiki": {
+      "uk": "Біссоне",
+      "en": "Bissone"
+    }
+  },
+  {
+    "id": "Q90",
+    "type": "place",
+    "label_uk": "Париж",
+    "label_en": "Paris",
+    "country": "FR",
+    "coords": [
+      48.8567,
+      2.3522
+    ],
+    "core": false,
+    "articles": [
+      "2026-10-30-notre-dame-de-paris",
+      "2026-11-09-haussmanns-paris"
+    ],
+    "wiki": {
+      "uk": "Париж",
+      "en": "Paris"
+    }
+  },
+  {
+    "id": "Q2807",
+    "type": "place",
+    "label_uk": "Мадрид",
+    "label_en": "Madrid",
+    "country": "ES",
+    "coords": [
+      40.4169,
+      -3.7033
+    ],
+    "core": false,
+    "articles": [
+      "2026-11-01-las-meninas"
+    ],
+    "wiki": {
+      "uk": "Мадрид",
+      "en": "Madrid"
+    }
+  },
+  {
+    "id": "Q160112",
+    "type": "place",
+    "label_uk": "Музей Прадо",
+    "label_en": "Museo del Prado",
+    "country": "ES",
+    "coords": [
+      40.4139,
+      -3.6922
+    ],
+    "core": false,
+    "articles": [
+      "2026-11-01-las-meninas"
+    ],
+    "wiki": {
+      "uk": "Національний_музей_Прадо",
+      "en": "Museo_del_Prado"
+    }
+  },
+  {
+    "id": "Q1050032",
+    "type": "place",
+    "label_uk": "Музей Пікассо (Барселона)",
+    "label_en": "Museu Picasso, Barcelona",
+    "country": "ES",
+    "coords": [
+      41.3852,
+      2.1809
+    ],
+    "core": false,
+    "articles": [
+      "2026-11-01-las-meninas"
+    ],
+    "wiki": {
+      "uk": "Музей_Пікассо_(Барселона)",
+      "en": "Museu_Picasso"
+    }
+  },
+  {
+    "id": "Q8717",
+    "type": "place",
+    "label_uk": "Севілья",
+    "label_en": "Seville",
+    "country": "ES",
+    "coords": [
+      37.3886,
+      -5.995
+    ],
+    "core": false,
+    "articles": [
+      "2026-11-01-las-meninas"
+    ],
+    "wiki": {
+      "uk": "Севілья",
+      "en": "Seville"
+    }
+  },
+  {
+    "id": "Q60",
+    "type": "place",
+    "label_uk": "Нью-Йорк",
+    "label_en": "New York City",
+    "country": "US",
+    "coords": [
+      40.7128,
+      -74.0061
+    ],
+    "core": false,
+    "articles": [
+      "2026-11-04-brooklyn-bridge"
+    ],
+    "wiki": {
+      "uk": "Нью-Йорк",
+      "en": "New_York_City"
+    }
+  },
+  {
+    "id": "Q14925",
+    "type": "place",
+    "label_uk": "Мюльгаузен",
+    "label_en": "Mühlhausen",
+    "country": "DE",
+    "coords": [
+      51.2167,
+      10.45
+    ],
+    "core": false,
+    "articles": [
+      "2026-11-04-brooklyn-bridge"
+    ],
+    "wiki": {
+      "uk": "Мюльгаузен",
+      "en": "Mühlhausen"
+    }
+  },
+  {
+    "id": "Q2749",
+    "type": "place",
+    "label_uk": "Аугсбург",
+    "label_en": "Augsburg",
+    "country": "DE",
+    "coords": [
+      48.3689,
+      10.8978
+    ],
+    "core": false,
+    "articles": [
+      "2026-11-16-holbeins-ambassadors"
+    ],
+    "wiki": {
+      "uk": "Аугсбург",
+      "en": "Augsburg"
+    }
+  },
+  {
+    "id": "Q1296",
+    "type": "place",
+    "label_uk": "Гент",
+    "label_en": "Ghent",
+    "country": "BE",
+    "coords": [
+      51.0536,
+      3.7253
+    ],
+    "core": false,
+    "articles": [
+      "2026-11-06-ghent-altarpiece"
+    ],
+    "wiki": {
+      "uk": "Гент",
+      "en": "Ghent"
+    }
+  },
+  {
+    "id": "Q938154",
+    "type": "place",
+    "label_uk": "Собор Святого Бавона",
+    "label_en": "St Bavo's Cathedral",
+    "country": "BE",
+    "coords": [
+      51.053,
+      3.7271
+    ],
+    "core": false,
+    "articles": [
+      "2026-11-06-ghent-altarpiece"
+    ],
+    "wiki": {
+      "en": "Saint_Bavo's_Cathedral,_Ghent"
+    }
+  },
+  {
+    "id": "Q917183",
+    "type": "place",
+    "label_uk": "Церква Богоматері (Брюгге)",
+    "label_en": "Church of Our Lady, Bruges",
+    "country": "BE",
+    "coords": [
+      51.2046,
+      3.2245
+    ],
+    "core": false,
+    "articles": [
+      "2026-11-13-monuments-men"
+    ],
+    "wiki": {
+      "uk": "Церква_Діви_Марії_(Брюгге)",
+      "en": "Church_of_Our_Lady,_Bruges"
+    }
+  },
+  {
+    "id": "Q155975",
+    "type": "place",
+    "label_uk": "Кутна Гора",
+    "label_en": "Kutná Hora",
+    "country": "CZ",
+    "coords": [
+      49.9484,
+      15.2682
+    ],
+    "core": true,
+    "articles": [
+      "2026-11-11-kutna-hora"
+    ],
+    "wiki": {
+      "uk": "Кутна_Гора",
+      "en": "Kutná_Hora"
+    }
+  },
+  {
+    "id": "Q1085",
+    "type": "place",
+    "label_uk": "Прага",
+    "label_en": "Prague",
+    "country": "CZ",
+    "coords": [
+      50.0875,
+      14.4214
+    ],
+    "core": false,
+    "articles": [
+      "2026-11-11-kutna-hora"
+    ],
+    "wiki": {
+      "uk": "Прага",
+      "en": "Prague"
+    }
+  },
+  {
+    "id": "Q1635896",
+    "type": "place",
+    "label_uk": "Соляна шахта Альтаусзее",
+    "label_en": "Altaussee salt mine",
+    "country": "AT",
+    "coords": [
+      47.6514,
+      13.7392
+    ],
+    "core": true,
+    "articles": [
+      "2026-11-13-monuments-men"
+    ]
+  },
+  {
+    "id": "Q95569",
+    "type": "place",
+    "label_uk": "Музей історії мистецтв (Відень)",
+    "label_en": "Kunsthistorisches Museum",
+    "country": "AT",
+    "coords": [
+      48.2039,
+      16.3616
+    ],
+    "core": false,
+    "articles": [
+      "2026-11-13-monuments-men"
+    ],
+    "wiki": {
+      "uk": "Музей_історії_мистецтв",
+      "en": "Kunsthistorisches_Museum"
+    }
+  },
+  {
+    "id": "Q202083",
+    "type": "place",
+    "label_uk": "Ферт-оф-Форт",
+    "label_en": "Firth of Forth",
+    "country": "GB",
+    "coords": [
+      56.1667,
+      -2.75
+    ],
+    "core": false,
+    "articles": [
+      "2026-11-15-forth-bridge"
+    ],
+    "wiki": {
+      "uk": "Ферт-оф-Форт",
+      "en": "Firth_of_Forth"
+    }
+  },
+  {
+    "id": "Q123709",
+    "type": "place",
+    "label_uk": "Данді",
+    "label_en": "Dundee",
+    "country": "GB",
+    "coords": [
+      56.4606,
+      -2.97
+    ],
+    "core": false,
+    "articles": [
+      "2026-11-15-forth-bridge"
+    ],
+    "wiki": {
+      "uk": "Данді",
+      "en": "Dundee"
+    }
+  },
+  {
+    "id": "Q84",
+    "type": "place",
+    "label_uk": "Лондон",
+    "label_en": "London",
+    "country": "GB",
+    "coords": [
+      51.5072,
+      -0.1275
+    ],
+    "core": false,
+    "articles": [
+      "2026-11-16-holbeins-ambassadors"
+    ],
+    "wiki": {
+      "uk": "Лондон",
+      "en": "London"
+    }
+  },
+  {
+    "id": "Q180788",
+    "type": "place",
+    "label_uk": "Національна галерея (Лондон)",
+    "label_en": "National Gallery, London",
+    "country": "GB",
+    "coords": [
+      51.5089,
+      -0.1283
+    ],
+    "core": false,
+    "articles": [
+      "2026-11-16-holbeins-ambassadors"
+    ],
+    "wiki": {
+      "uk": "Національна_галерея_(Лондон)",
+      "en": "National_Gallery"
+    }
+  },
+  {
+    "id": "Q150995",
+    "type": "event",
+    "label_uk": "Вестфальський мир",
+    "label_en": "Peace of Westphalia",
+    "years": {
+      "start": 1648
+    },
+    "country": "DE",
+    "kind": "history",
+    "core": false,
+    "articles": [
+      "2026-10-16-alexander-vii"
+    ],
+    "wiki": {
+      "uk": "Вестфальський_мир",
+      "en": "Peace_of_Westphalia"
+    }
+  },
+  {
+    "id": "Q193270",
+    "type": "event",
+    "label_uk": "Латеранські угоди",
+    "label_en": "Lateran Treaty",
+    "years": {
+      "start": 1929
+    },
+    "country": "VA",
+    "kind": "history",
+    "core": false,
+    "articles": [
+      "2026-10-19-st-peters-square"
+    ],
+    "wiki": {
+      "uk": "Латеранські_угоди",
+      "en": "Lateran_Treaty"
+    }
+  },
+  {
+    "id": "Q184332",
+    "type": "event",
+    "label_uk": "Ефеський собор",
+    "label_en": "Council of Ephesus",
+    "years": {
+      "start": 431
+    },
+    "country": "TR",
+    "kind": "history",
+    "coords": [
+      37.9397,
+      27.3486
+    ],
+    "core": false,
+    "articles": [
+      "2026-10-23-santa-maria-maggiore"
+    ],
+    "wiki": {
+      "uk": "Ефеський_собор",
+      "en": "Council_of_Ephesus"
+    }
+  },
+  {
+    "id": "Q63167656",
+    "type": "event",
+    "label_uk": "Пожежа в соборі Паризької Богоматері",
+    "label_en": "Notre-Dame de Paris fire",
+    "years": {
+      "start": 2019
+    },
+    "country": "FR",
+    "kind": "history",
+    "coords": [
+      48.853,
+      2.3498
+    ],
+    "core": false,
+    "articles": [
+      "2026-10-30-notre-dame-de-paris"
+    ],
+    "wiki": {
+      "uk": "Пожежа_в_Соборі_Паризької_Богоматері",
+      "en": "Notre-Dame_fire"
+    }
+  },
+  {
+    "id": "Q1117470",
+    "type": "event",
+    "label_uk": "Перебудова Парижа Османом",
+    "label_en": "Haussmann's renovation of Paris",
+    "years": {
+      "start": 1853,
+      "end": 1870
+    },
+    "country": "FR",
+    "kind": "urbanism",
+    "core": true,
+    "articles": [
+      "2026-11-09-haussmanns-paris"
+    ],
+    "wiki": {
+      "uk": "Османська_реконструкція_Парижа",
+      "en": "Haussmann's_renovation_of_Paris"
+    }
+  },
+  {
+    "id": "Q2273396",
+    "type": "event",
+    "label_uk": "Monuments Men (програма MFAA)",
+    "label_en": "Monuments, Fine Arts, and Archives program",
+    "years": {
+      "start": 1943,
+      "end": 1946
+    },
+    "kind": "history",
+    "core": true,
+    "articles": [
+      "2026-11-13-monuments-men"
+    ],
+    "wiki": {
+      "en": "Monuments,_Fine_Arts,_and_Archives_program"
+    }
+  },
+  {
+    "id": "Q1287158",
+    "type": "event",
+    "label_uk": "Катастрофа на Тейському мосту",
+    "label_en": "Tay Bridge disaster",
+    "years": {
+      "start": 1879
+    },
+    "country": "GB",
+    "kind": "history",
+    "coords": [
+      56.4385,
+      -2.9883
+    ],
+    "core": false,
+    "articles": [
+      "2026-11-15-forth-bridge"
+    ],
+    "wiki": {
+      "uk": "Руйнування_Тейського_мосту",
+      "en": "Tay_Bridge_disaster"
+    }
+  },
+  {
+    "id": "x:theft-of-the-just-judges",
+    "type": "event",
+    "label_uk": "Крадіжка «Справедливих суддів»",
+    "label_en": "Theft of the Just Judges panel",
+    "years": {
+      "start": 1934
+    },
+    "country": "BE",
+    "kind": "history",
+    "coords": [
+      51.053,
+      3.7271
+    ],
+    "core": false,
+    "articles": [
+      "2026-11-06-ghent-altarpiece"
+    ]
+  }
+]
