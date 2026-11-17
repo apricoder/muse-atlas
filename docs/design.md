@@ -188,9 +188,15 @@ An optional `package.json` with only `"scripts": { "validate": "node scripts/val
 3. **Map:** Leaflet with the base map from the repo (and an optional OSM layer), pins from `coords`.
 4. **Quiz:** questions generated from edges ("Who created X?", "Where is X?", "When?"). Spaced repetition state lives in `localStorage` only.
 
+**Graph defaults and filters.** The graph opens with only the `core` nodes. "Main nodes only" is one filter alongside type, country, art form and century, and all filters combine (AND). The graph always shows how much is hidden ("showing 23 of 152 · show all"). Opening a node (from search, a link or a relation) overrides the filters for that node: its first-level neighbours are always shown, so filters never block reading through the graph. The filter state is kept in the URL hash, so a copied link reproduces the view.
+
+**Node styling.** Each type has both a colour and a shape (person = circle, work = rounded square, place = diamond, event = ring), so types stay distinguishable without relying on colour alone.
+
+**Theme.** One responsive page, not a separate mobile site. All colours are CSS custom properties, with a light and a dark set; Cytoscape's styles read the same values. There are three settings: auto (follows `prefers-color-scheme`), light and dark. The choice is stored in `localStorage` and toggled next to the УКР/EN switch. The default look is a dark graph with a light reading panel.
+
 Plus an **entity side panel**, which opens when a node is clicked in any view. From top to bottom:
 
-1. A full-width hero image with the title over a dark gradient, the years and type as small labels, and a one-line image credit underneath. Without an image, the panel shows a plain header.
+1. A full-width hero image with the title over a dark gradient, the years and type as small labels, and a one-line image credit underneath. Without an image, the panel shows a plain header in the type's colour.
 2. The summary, rendered as paragraphs with `node:` links. Clicking a link opens that node's panel and focuses it in the current view.
 3. Relations, grouped by `rel` and shown as links.
 4. "Згадується в": the titles and dates of the articles that mention the node.
